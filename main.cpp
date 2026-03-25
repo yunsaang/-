@@ -1,11 +1,105 @@
 #include <stdio.h>
 int main()
 {
-	for (int i = 1; i < 5; ++1)
+	int sum = 0;
+	for (int i = 1; i <= 10; ++i)
 	{
-		printf("%d\n", i+1);
+		if (i % 2 == 0)
+		sum += i;
 	}
+	printf("%d\n", i);
 }
+
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 1; i <= 10; ++i)
+//	{
+//		if (i % 2 == 0)
+//		printf("%d\n", i);
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 1; i <= 10; ++i)
+//	{
+//		printf("%d\n", i);
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 1; i < 10; ++i)
+//	{
+//		printf("%d\n", i + 1);
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sum = 0;
+//
+//	for (int i = 1; i <= 100; ++i)
+//	{
+//		sum += i;
+//	}
+//
+//	printf("sum = %d\n", sum);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sum = 0;
+//
+//	for (int i = 1; i <= 5; ++i)
+//	{
+//		sum += i;
+//		printf("sum = %d\n", sum);
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sum = 0;
+//
+//	for (int i = 1; i <= 5; ++I)
+//	{
+//		sum = sum + 1
+//			printf("sum = %d\n", sum);
+//	}
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sum = 0;
+//
+//	sum = sum + 1
+//	printf("sum = %d\n", sum);
+//	sum = sum + 2
+//	printf("sum = %d\n", sum);
+//	sum = sum + 3
+//	printf("sum = %d\n", sum);
+//	sum = sum + 4
+//	printf("sum = %d\n", sum);
+//	sum = sum + 5
+//	printf("sum = %d\n", sum);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 1; i < 5; ++1)
+//	{
+//		printf("%d\n", i+1);
+//	}
+//}
 
 //#include <stdio.h>
 //int main()
