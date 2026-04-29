@@ -180,4 +180,5 @@ int main()
 
 	const char* s = "ABC";
 	printf("s\n", s);
+	printf("s\n", s + 1);
 }
