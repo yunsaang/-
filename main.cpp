@@ -1,242 +1,183 @@
+//#include <stdio.h>
+//int main()
+//{
+//	//¡§ºˆ -> ¬¸(T) 0æ∆¥— ∏µÁ or ∞≈¡˛(F) : 0
+//	//¬¸(T) or ∞≈¡˛(F) -> 1, 0
+//	int a = 10;
+//	int b = 2;
+//
+//	// a = ¬¸
+//	// b = ∞≈¡˛
+//	printf("%d\n", a && b);
+//	printf("%d\n", a || b);
+//	printf("%d\n", !a);
+//	printf("%d\n", !b);
+//}
+
+//#include <stdio.h>
+//void PrintNumbers(int begin, int end)
+//{
+//	for (int i = begin, i <= end; ++i)
+//		printf("%3d", i);
+//	printf("\n");
+//}
+//int main()
+//{
+//	PrintNumbers(10, 20);
+//}
+
+//#include <stdio.h>
+//void PrintData(int a, int* b)
+//{
+//	printf("%d %d\n", a, *b);
+//}
+//int main()
+//{
+//	int n = 100;
+//
+//	PrintData(n, &n)
+//}
+
+//#include <stdio.h>
+//void PrintData(int a, int* b)
+//{
+//	printf("%d %d\n", a, *b);
+//}
+//int main()
+//{
+//	int n = 100;
+//
+//	PrintData(n, &n)
+//}
+// 
+//
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 10;
+//	int* pn1 = &n;
+//	int* pn2 = pn1;
+//	int** pn3 = pn2;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int* pn1 = &a;
+//	int* pn2 = &b;
+//	int** pp = &pn1;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char n = 10;
+//	char* pn = &n;
+//	char** ppn = &pn;
+//
+//	printf("%p %p %p\n", &n, pn, &pn);
+//	printf("%p %p %p\n", &n+1, pn+1, &pn+1);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[4] = { 10, 20, 30, 40 };
+//
+//	printf("%p %p\n", &arr[0], &arr[1]);
+//	printf("%p %p\n", &arr[0]+1, &arr[1]+1);
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int arr[4] = { 10, 20, 30, 40 };
+//
+//	int* pa = NULL;
+//
+//	pa = &arr[3];
+//	
+//
+//	printf("&d\n",  pa[0]);
+//	printf("&d\n", pa[-1]);
+//	printf("&d\n", pa[-2]);
+//	printf("&d\n", pa[-3]);
+//	
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char a[4] = { 10, 20, 30, 40 };
+//	int b[4] = { 10, 20, 30, 40 };
+//
+//	printf("%p %p\n", a, b);
+//	printf("%p %p\n", a + 1, b + 1);
+//	printf("%p %p\n", a + 2, b + 2);
+//
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	//πÆ¿⁄(¡§ºˆ), πÆ¿⁄ø≠(πÆ¿⁄¡˝«’+\0)
+//	printf("%d %c\n", 65, 65);
+//	printf("%d %c\n", 'A', 'A');
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 65;
+//
+//	printf("%d %c\n", n, n);
+//	
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 'A';
+//
+//	printf("%d %c\n", n, n);
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int n = 'A';
+//
+//	printf("%d %c\n", n, n);
+//
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	// "ABC" : ªÛºˆ(literal) πÆ¿⁄ø≠
+//	printf("s\n", "ABC");
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	// "ABC" : ªÛºˆ(literal) πÆ¿⁄ø≠
+//	printf("s\n", "ABC");
+//	printf("%p s\n", "ABC", "ABC");
+//}
+
 #include <stdio.h>
 int main()
 {
-	//Í∏∞Î≥∏ Ïó∞ÏÇ∞Ïûê
-	//ÎÖºÎ¶¨ Ïó∞ÏÇ¨Ïûê(Í∞í, ÎπÑÌä∏)
-	int a = 10;
-	int b = 3;
+	printf("s\n", "ABC");
+	printf("%p s\n", "ABC", "ABC");
 
-	printf("%d\n", a && b);
-	printf("%d\n", a | b);
-	printf("%d\n", a);
-	printf("%d\n", b);
+	const char* s = "ABC";
+	printf("s\n", s);
 }
-
-//#include <stdio.h>
-//int main()
-//{
-//	//Í∏∞Î≥∏ Ïó∞ÏÇ∞Ïûê
-//	int a = 10;
-//	int b = 3;
-//	a += b;// a = a + b;
-//	printf("%d, %d\n", a, b);
-//	a = 10;
-//	a += 2; //a = a + 2;
-//	
-//}
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	//Í∏∞Î≥∏ Ïó∞ÏÇ∞Ïûê
-//	int a = 10;
-//	int b = 3;
-//
-//	printf("%d\n", a < b);
-//	printf("%d\n", a > b);
-//	printf("%d\n", a <= b);
-//	printf("%d\n", a >= b);
-//	printf("%d\n", a == b);
-//	printf("%d\n", a = b); //ÎÇòÎ®∏ÏßÄ
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	//Í∏∞Î≥∏ Ïó∞ÏÇ∞Ïûê
-//	int a = 10;
-//	int b = 3;
-//
-//	print("%d\n", a + b);
-//	print("%d\n", a - b);
-//	print("%d\n", a * b);
-//	print("%d\n", a / b);
-//	print("%d\n", a % b);  //ÎÇòÎ®∏ÏßÄ
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 10;
-// short % = 10;
-//	int n = 10;
-//	long 1 = 10;
-//	float f = 10;
-//	double d = 10;
-//
-//	printf("%d\n", sizeof(c));
-//	printf("%d\n", sizeof(%));
-//	printf("%d\n", sizeof(n));
-//	printf("%d\n", sizeof(1));
-//	printf("%d\n", sizeof(f));
-//	printf("%d\n", sizeof(d));
-//
-//}
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 10;
-//	int n = 10;
-//	long 1 = 10;
-//	float f = 10;
-//	double d = 10;
-//
-//	printf("%d\n", c);
-//	printf("%d\n", n);
-//	printf("%d\n", 1);
-//	printf("%d\n", f);
-//	printf("%d\n", d);
-//
-//
-//
-//}
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 10;
-//	int n = 10;
-//	double d = 10;
-//
-//	printf("%d %d %g\n", c, n, d);
-//	printf("%d %d %d\n", sizeof(c), sizeof(n), sizeof(d));
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 10;
-//	int n = 10;
-//	double d = 10;
-//
-//	printf("%d %d\n %g\n", c, n, d);
-//	printf("%d %d\n", sizeof(c), sizeof(n), sizeof(d));
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 255;
-//	int n = 255;
-//	printf("%d %d\n", c, n);
-//	printf("%d %d\n", sizeof(c), sizeof(n));
-//}
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	char c = 10;
-//	int n = 10;
-//
-//	printf("%d %d\n", c, n);
-//
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	int n = 10;
-//	int k = 20;
-//
-//	n = 30;
-//	n = k;
-//	printf("10\n");
-//	printf("%d\n", 10);
-//	printf("%d\n", n);
-//}
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf("abc \n%d \n%g\n", 100, 8.99);
-//	
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf("abc %d %g\n", 100, 8.99);
-//	printf("abc %d %g\n", 100, 8.99);
-//}
-
-
-
-//#include <stdio.h>
-//void print()
-//{
-	//printf("1. hello\n");
-	//printf("2. hello\n");
-	//printf("3. hello\n");
-
-//}
-//int main()
-//{
-	//print();
-	//print();
-	//print();
-//}
-   
-//#include <stdio.h>
-//int main()
-//{
-
-	//printf("1. hello\n");
-	//printf("2. hello\n");
-	//printf("3. hello\n");
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf("hello\n");
-//	printf("%d\n", 10);
-//}	printf("%g\n", 5.5);
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf ("hello\n");
-//	printf("hello\n");
-//}	printf("hello\n");
-
-
-//#include <studio.h>
-//int main()
-//{
-//	printf("hello\n");
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf("1. hello\n");
-//	printf("2. hello\n");
-//	printf("3. hello\n");
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf("hello\n");
-//	printf("%d\n", 10);
-//}	printf("%g\n", 5.5);
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	printf ("hello\n");
-//	printf("hello\n");
-//}	printf("hello\n");
-
-
-//#include <studio.h>
-//int main()
-//{
-//	printf("hello\n");
-//}
