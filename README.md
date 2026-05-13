@@ -1,81 +1,445 @@
-# Activity 1
-AI에게 자기소개하고 ChatGPT 소개 받기
-
-안녕하세요 저는 이번 한세대학교 it학부에 새롭게 입학하게된 신입생 조윤상이라고 합니다. 제가 한세대학교 it학부를 지원하게 된 계기는 평소에 프로그래밍 언어를 배우고 코딩하는것에 흥미가 있어 it학부라는 곳을 지원하게 되었습니다. 제 mbti는 infj이고 평소에 영화 보는 것을 좋아하고 그 중 sf 나 액션 장르를 가장 좋아합니다.
-
-Ai 답변 :
-저는 **ChatGPT**라는 인공지능 대화 프로그램입니다. 🤖
-좀 더 쉽게 설명하면:
-저는 사람이 아니라 컴퓨터 프로그램이고
-**OpenAI**에서 만든 AI 챗봇입니다.
-질문을 하거나 이야기를 하면 대화를 통해 답을 해주는 역할을 합니다. 💬
-예를 들면 저는 이런 것들을 도와줄 수 있어요:
-📚 공부 질문 설명
-💻 프로그래밍 관련 도움
-✍️ 글쓰기나 자기소개 수정
-🎬 영화 추천
-🌐 IT 지식 설명
-그래서 조윤상님처럼 IT학부 신입생이 공부하면서 궁금한 것들을 물어보면 같이 생각하고 설명해 줄 수 있는 AI 도우미라고 생각하시면 됩니다
 
 
-# Activity 2
-AI에게 질문하기
 
-1.chatgpt 어떤 과정과 계기로 만들어지게 됬나요?
+ex\
 
-ChatGPT**는 사람과 자연스럽게 대화할 수 있는 인공지능을 만들기 위해 개발되었습니다. 인공지능 연구자들은 오래전부터 컴퓨터가 인간의 언어를 이해하고 대답할 수 있도록 만드는 연구를 진행해 왔으며, 이러한 분야를 **Natural Language Processing**라고 합니다.
-이 연구를 바탕으로 인공지능 연구 기관인 **OpenAI**는 많은 양의 데이터를 학습하여 문장을 이해하고 생성할 수 있는 GPT 모델을 개발했습니다. 이 모델은 **Transformer (deep learning architecture)**라는 딥러닝 구조를 기반으로 만들어졌으며, 이전의 인공지능보다 더 자연스럽게 문맥을 이해하고 대화할 수 있는 특징을 가지고 있습니다.
-이러한 기술 발전을 바탕으로 2022년에 GPT 모델을 대화형 서비스로 발전시킨 ChatGPT가 공개되었습니다. ChatGPT는 사람들이 인공지능과 쉽게 대화하며 정보를 얻거나 공부, 글쓰기, 프로그래밍 등 다양한 작업을 도움받을 수 있도록 만들어졌습니다. 즉, 인공지능 언어 연구의 발전과 더 자연스러운 인간-컴퓨터 상호작용을 만들고자 하는 목적이 ChatGPT가 만들어지게 된 주요한 계기라고 할 수 있습니다. 
+//#include <stdio.h>
+//int  main()
+//{
+//	char* s1;
+//	char s2[10];
+//
+//		printf("%s %s\n", s1, s2);
+//}
 
-2.ChatGPT 같은 AI를 직접 만들려면 어덯게 해야 하나요?
+//#include <stdio.h>
+//int  main()
+//{
+//	const char* s1 = "Hello";
+//	char s2[10] = "Hello";
+//
+//
+//	printf("%s %s\n", s1, s2);
+//}
 
-ChatGPT 같은 AI를 직접 만들려면 여러 단계의 공부와 기술이 필요합니다. IT학부 신입생이시라면 아래와 같은 순서로 준비하면 좋습니다. 😊
-1️⃣ 프로그래밍 언어 배우기
-먼저 프로그래밍 기초를 배워야 합니다.
-특히 AI 분야에서 많이 사용하는 언어는
-Python 🐍
-Java
-이 중에서 Python이 인공지능 개발에서 가장 많이 사용됩니다.
-2️⃣ 수학과 기초 이론 공부
-AI를 만들려면 수학도 중요합니다.
-주요 분야:
-📊 Linear Algebra (선형대수)
-📈 Statistics (통계)
-📉 Calculus (미적분)
-이 수학들이 AI 모델이 데이터를 학습하는 원리에 사용됩니다.
-3️⃣ 인공지능 / 머신러닝 공부
-그 다음은 AI의 핵심 기술을 배우는 단계입니다.
-Machine Learning
-Deep Learning
-이 분야에서 컴퓨터가 데이터를 보고 스스로 패턴을 학습하도록 만드는 방법을 배웁니다.
-4️⃣ AI 모델과 프레임워크 사용
-AI 개발에서는 이미 만들어진 도구도 많이 사용합니다.
-대표적인 것들:
-TensorFlow
-PyTorch
-이 프로그램을 이용하면 AI 모델을 만들고 학습시키는 것이 가능합니다.
-5️⃣ 자연어 처리 공부
-ChatGPT 같은 AI는 언어를 이해하는 기술이 필요합니다.
-이 분야를
-Natural Language Processing
-이라고 합니다.
-또 ChatGPT는
-Transformer (deep learning architecture)
-구조를 사용하는 AI 모델입니다.
+//#include <stdio.h>
+//int  main()
+//{
+//	const char* s1 = "Hello";
+//	char s2[10] = "Hello";
+//
+//		printf("%s %s\n", s1, s2);
+//}
+//
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o' };
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
+//}
 
-3.제가 대학교 it학부를 다니면서 꼭 배워야할 중요한게 뭘까요?
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o' };
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
+//	printf("%s\n", arr + 1);
+//	printf("%s\n", &arr[0]+ 1);
+//}
 
-대학교 IT학부를 다니면서 가장 중요하게 배워야 할 것은 프로그래밍 능력과 컴퓨터 기초 지식입니다. 먼저 **Python**이나 **Java**와 같은 프로그래밍 언어를 익혀 실제로 프로그램을 만들어 보는 경험을 쌓는 것이 중요합니다. 또한 프로그램을 효율적으로 만들기 위해 **Algorithms**과 자료구조를 이해하고, 컴퓨터가 어떻게 동작하는지 알기 위해 **Operating Systems**와 같은 기초 과목도 함께 공부해야 합니다. 여기에 데이터 관리에 필요한 **MySQL**과 같은 데이터베이스 기술을 배우면 실제 서비스나 프로그램을 개발하는 데 도움이 됩니다. 이러한 기초 지식과 함께 다양한 프로젝트 경험을 쌓는다면 IT 분야에서 필요한 실력과 문제 해결 능력을 기를 수 있습니다.
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o','0','\'};
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
+//	printf("%s\n", arr + 1);
+//	printf("%s\n", &arr[0] + 1);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o','\0'};
+//	char* p = arr;
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", p);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	const char arr[10] = { 'H','E','E','l','l','o','\0' };
+//	const char* p = arr;
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", p);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	int n = 10;
+//	int *p = &n;
+//
+//	printf("%d %d\n", n, *p)
+//}
+
+//#include <stdio.h>
+//int gn = 10; // 전역변수 : GD
+//
+//int  main()
+//{
+//	const char* s = "Hello"; // s : stack 변수 , "Hello" : gd
+//	int n = 10; //stack
+//	int* p = &n;
+//	static int sn = 10; //sn : 정적변수
+//
+//	printf("%d %d\n", n, *p)
+//}
+
+//#include <stdio.h>
+//
+//int gn = 10;
+//int  main()
+//{
+//	const char* s = "Hello"; 
+//	int n = 10; 
+//	int* p = &n;
+//	static int sn = 10;
+//
+//	printf("GD : %p %p %p\n", s, &gn, &sn);
+//	printf("stack : %p %p %p\n", &s, &n, &p);
+//	 
+//}
+
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int a = 20;
+//}
+//void f3()
+//{
+//	int a = 30;
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int b = 20;
+//}
+//void f3()
+//{
+//	int c = 30;
+//	// printf("%d\n", m);
+//	printf("f3() : g - d\n", g);
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+
+//#include <stdio.h>
+//int g = 30
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int a = 20;
+//}
+//void f3()
+//{
+//	int a = 30;
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+//
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int b = 20;
+//}
+//void f3()
+//{
+//	int c = 30;
+//	// printf("%d\n", m
+//	printf("f3() : g - 
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	if (n == 1)
+//	{
+//		int d = 4;
+//		printf("if() : d - d\n", d);
+//	}
+//	//printf("%d\n", a)
+//	printf("if() : g - g\n", g)
+//}
+
+//#include <stdio.h>
+//int g = 30;
+//void f1()
+//{
+//	
+//	int a = 10;
+//	printf("f1() a:%d\n", a);
+//}
+//void f2()
+//{
+//	int b = 20;
+//	printf("f2() b:%d\n", b);
+//}
+//void f3()
+//{
+//	int c = 30;
+//	printf("f3() c:%d\n", c);
+//}
+//int main()
+//{
+//	f1();
+//	f2();
+//	f3();
+//
+//}
+
+//#include <stdio.h>
+//int g = 30;
+//void f1()
+//{
+//
+//	int a = 10;
+//	printf("f1() a:%d\n", a);
+//}
+//void f2()
+//{
+//	int b = 20;
+//	printf("f2() b:%d\n", b);
+//	f1();
+//}
+//void f3()
+//{
+//	int c = 30;
+//	printf("f3() c:%d\n", c);
+//	f2();
+//}
+//int main()
+//{
+//	f3();
+//
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int n = 10;
+//
+//	int* p = (int*)malloc(4);
+//	*p = 10;
+//
+//
+//	printf("%d %d\n", n, *p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int n = 10;
+//
+//	int* p = (int*)malloc(sizeof(int));
+//	*p = 10;
+//
+//
+//	printf("%d %d\n", n, *p);
+//	free(p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	
+//	int arr[4] = { 10,20,30,40 };
+//
+//	int* p = (int*)malloc(16);
+//	p[0] = 10;
+//	p[1] = 20;
+//	p[2] = 30;
+//	p[3] = 40;
+//	*p = 10;
+//
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//
+//	int arr[4] = { 10,20,30,40 };
+//
+//	int* p = (int*)malloc(sizeof(int)*4);
+//	p[0] = 10;
+//	p[1] = 20;
+//	p[2] = 30;
+//	p[3] = 40;
+//
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int* p = (int*)malloc(sizeof(int) * 4);
+//	p[0] = (0+1)*10;
+//	p[1] = (1+1)*10;
+//	p[2] = (2+1)*10;
+//	p[3] = (3+1)*10;
+//
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int* p = (int*)malloc(sizeof(int) * 4);
+//	for(int i = 0; i < 4; ++i)
+//	p[i] = (i + 1) * 10;
+//
+//	for (int i = 0; i < 4; ++i)
+//		printf("%d", p[i]);
+//	printf("\n");
+//
+//	free(p);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int* AllocInteger(int car)
+//{
+//	return (int*)malloc(sizeof(int) * car);
+//}
+//void InitAreay(int* p, int size)
+//{
+//	for (int i = 0; i < size; ++i)
+//		printf("%d", p[i]);
+//	printf("\n")
+//}
+//void printAreay(int* p, int size)
+//{
+//	for (int i = 0; i < size; ++i)
+//		printf("%d", p[i]);
+//	printf("\n")
+//}
+//void FreeInteger(int* p)
+//{
+//	free(p);
+//}
+//int main()
+//{
+//	int* p = AllocInteger(4);
+//
+//	InitAreay(p, 4);
+//	printAreay(p, 4);
+//	
+//
+//	free(p);
+//}
+
+#include <stdio.h>
+#include <stdlib.h>
+int* AllocInteger(int car)
+{
+	return (int*)malloc(sizeof(int) * car);
+}
+void InitAreay(int* p, int size)
+{
+	for (int i = 0; i < size; ++i)
+		printf("%d", p[i]);
+	printf("\n")
+}
+void printAreay(int* p, int size)
+{
+	for (int i = 0; i < size; ++i)
+		printf("%d", p[i]);
+	printf("\n")
+}
+void FreeArray(int* p)
+{
+	free(p);
+}
+int main()
+{
+	int* p = AllocArray(4);
+
+	InitAreay(p, 4);
+	printAreay(p, 4);
 
 
-# Activity 3
-간단한 창작 체험
-
-2030년의 아침, 기숙사 창문으로 햇빛이 들어오자 조용한 목소리가 학생을 깨웠다. 개인 학습 도우미인 AI **ChatGPT**가 오늘의 일정과 해야 할 과제를 알려주고 있었다. 학생은 눈을 뜨자마자 태블릿을 켜고 오늘 수업에서 사용할 프로그램 코드를 확인했다. AI는 코드의 오류를 찾아주고 더 좋은 방법을 제안해 주었고, 학생은 그 조언을 바탕으로 프로그램을 수정했다.
-대학교에 도착하자 강의실에는 교수와 학생들뿐만 아니라 여러 AI 시스템이 함께 수업을 돕고 있었다. 학생들이 어려운 개념을 질문하면 AI가 바로 설명해 주었고, 실습 시간에는 각자의 컴퓨터에서 작성한 코드를 분석해 오류를 알려주었다. 덕분에 학생들은 단순히 지식을 외우는 것이 아니라, 새로운 아이디어를 만들고 문제를 해결하는 데 더 많은 시간을 사용할 수 있었다.
-수업이 끝난 뒤 학생들은 팀을 이루어 인공지능 프로젝트를 진행했다. 서로의 아이디어를 공유하고 AI와 함께 프로그램을 개발하면서 더 창의적인 결과를 만들어 냈다. 이렇게 2030년의 대학 생활은 인공지능과 사람이 함께 배우고 성장하는 새로운 교육 환경으로 변화하고 있었다.
-
-
-# Activity 4
-소감: 이번 실습에서는 인공지능 챗봇인 ChatGPT를 활용하여 다양한 질문을 하고 답변을 받아보는 활동을 진행했다. Ai 가 어덯게 작동하는지 원리와 구조를 이해하고 ai 도구를 직접 활용해 실습하는 과정을 통해서 Ai는 정말 우리에게 많은 것들을 도와준다고 생각했다. 단순히 정보를 제공해주는것 뿐 만 아니라 뭘 해야 할지 미리 다 계획을 세워주니까 정말 편리 하다고 생각했다. 하지만 한편으로는 ai가 정보를 주게 된다면 내가 생각하는 과정을 많이 하지 않아도 되서 위험하다고 생각했고 앞으로는 ai를 사용할때는 정말 필요한 정보만 사용하고 할 수 있는 것들은 직접 해야 겠다고 생각했다.
-
+	free(p);
+}
