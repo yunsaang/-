@@ -1,339 +1,440 @@
-
 //#include <stdio.h>
-//int main()
+//int  main()
 //{
-//	const char** s = 'ABC';
+//	char* s1;
+//	char s2[10];
 //
-//	printf("%d\n", 10);
-//	printf("%p\n", s);
-//	printf("%s\n", s);
-//	printf("%s\n", "ABC");
+//		printf("%s %s\n", s1, s2);
 //}
 
 //#include <stdio.h>
-//int main()
+//int  main()
 //{
-//	const char* s = "ABC";
+//	const char* s1 = "Hello";
+//	char s2[10] = "Hello";
 //
-//	printf("%d\n", 10);
-//	printf("%p\n", s);
-//	printf("%p\n", s + 1);
-//	printf("%s\n", s);
-//	printf("%s\n", s + 1);
-//	printf("%s\n", "ABC");
+//
+//	printf("%s %s\n", s1, s2);
 //}
 
 //#include <stdio.h>
-//int main()
+//int  main()
 //{
-//	const char* s = "DBC";
+//	const char* s1 = "Hello";
+//	char s2[10] = "Hello";
 //
-//	printf("%s\n", s);
-//	printf("%c\n", *s);
-//	printf("%c\n", *(s + 1));
-//	printf("%c\n", *(s + 2));
-//	printf("%c\n", *s + 2);
-//  printf("%c\n", 'A' + 2);
+//		printf("%s %s\n", s1, s2);
+//}
+//
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o' };
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
 //}
 
 //#include <stdio.h>
-//int main()
+//int  main()
 //{
-//	const char* s = "DBC";
+//	char arr[10] = { 'H','E','E','l','l','o' };
 //
-//	printf("%s\n", s);
-//	printf("%c\n", s[0]);
-//	printf("%c\n", s[1]);
-//	printf("%c\n", s[2]);
-//}
-
-
-//#include <stdio.h>
-//int main()
-//{
-//	const char* s = "ABC";
-//
-//	printf("%s\n", s);
-//	printf("%s\n", &s[1);
-//	printf("%c\n", s[0]+32);
-//	printf("%c\n", s[1]+32);
-//	printf("%c\n", s[2]);
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
+//	printf("%s\n", arr + 1);
+//	printf("%s\n", &arr[0]+ 1);
 //}
 
 //#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o','0','\'};
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", &arr[0]);
+//	printf("%s\n", arr + 1);
+//	printf("%s\n", &arr[0] + 1);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	char arr[10] = { 'H','E','E','l','l','o','\0'};
+//	char* p = arr;
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", p);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	const char arr[10] = { 'H','E','E','l','l','o','\0' };
+//	const char* p = arr;
+//
+//	printf("%s\n", arr);
+//	printf("%s\n", p);
+//}
+
+//#include <stdio.h>
+//int  main()
+//{
+//	int n = 10;
+//	int *p = &n;
+//
+//	printf("%d %d\n", n, *p)
+//}
+
+//#include <stdio.h>
+//int gn = 10; // 전역변수 : GD
+//
+//int  main()
+//{
+//	const char* s = "Hello"; // s : stack 변수 , "Hello" : gd
+//	int n = 10; //stack
+//	int* p = &n;
+//	static int sn = 10; //sn : 정적변수
+//
+//	printf("%d %d\n", n, *p)
+//}
+
+//#include <stdio.h>
+//
+//int gn = 10;
+//int  main()
+//{
+//	const char* s = "Hello"; 
+//	int n = 10; 
+//	int* p = &n;
+//	static int sn = 10;
+//
+//	printf("GD : %p %p %p\n", s, &gn, &sn);
+//	printf("stack : %p %p %p\n", &s, &n, &p);
+//	 
+//}
+
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int a = 20;
+//}
+//void f3()
+//{
+//	int a = 30;
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int b = 20;
+//}
+//void f3()
+//{
+//	int c = 30;
+//	// printf("%d\n", m);
+//	printf("f3() : g - d\n", g);
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+
+//#include <stdio.h>
+//int g = 30
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int a = 20;
+//}
+//void f3()
+//{
+//	int a = 30;
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	printf("%d\n", a)
+//}
+//
+//#include <stdio.h>
+//void f1()
+//{
+//	int a = 10;
+//}
+//void f2()
+//{
+//	int b = 20;
+//}
+//void f3()
+//{
+//	int c = 30;
+//	// printf("%d\n", m
+//	printf("f3() : g - 
+//}
+//int main()
+//{
+//	int m = 1;
+//	//변수 유효범위
+//	f1();
+//	f2();
+//	f3();
+//
+//	if (n == 1)
+//	{
+//		int d = 4;
+//		printf("if() : d - d\n", d);
+//	}
+//	//printf("%d\n", a)
+//	printf("if() : g - g\n", g)
+//}
+
+//#include <stdio.h>
+//int g = 30;
+//void f1()
+//{
+//	
+//	int a = 10;
+//	printf("f1() a:%d\n", a);
+//}
+//void f2()
+//{
+//	int b = 20;
+//	printf("f2() b:%d\n", b);
+//}
+//void f3()
+//{
+//	int c = 30;
+//	printf("f3() c:%d\n", c);
+//}
+//int main()
+//{
+//	f1();
+//	f2();
+//	f3();
+//
+//}
+
+//#include <stdio.h>
+//int g = 30;
+//void f1()
+//{
+//
+//	int a = 10;
+//	printf("f1() a:%d\n", a);
+//}
+//void f2()
+//{
+//	int b = 20;
+//	printf("f2() b:%d\n", b);
+//	f1();
+//}
+//void f3()
+//{
+//	int c = 30;
+//	printf("f3() c:%d\n", c);
+//	f2();
+//}
+//int main()
+//{
+//	f3();
+//
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
 //	int n = 10;
-//	const int cn = 10;
 //
-//	n = 100;
-//	const int * p = &n;
+//	int* p = (int*)malloc(4);
+//	*p = 10;
+//
 //
 //	printf("%d %d\n", n, *p);
 //}
 
 //#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
 //	int n = 10;
-//	const int* p = &n;
 //
-//	*p = 100; X
+//	int* p = (int*)malloc(sizeof(int));
+//	*p = 10;
 //
-//	printf("%d %d\n", n, p, *p);
+//
+//	printf("%d %d\n", n, *p);
+//	free(p);
 //}
 
 //#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
-//	int arr[4] = { 5, 6, 9, 10 };
-//	const int* p = arr;
+//	
+//	int arr[4] = { 10,20,30,40 };
 //
-//	//*p = 100;
-//	//p[2] = 90;
-//	printf("%d %d\n", arr[0], *p);
+//	int* p = (int*)malloc(16);
+//	p[0] = 10;
+//	p[1] = 20;
+//	p[2] = 30;
+//	p[3] = 40;
+//	*p = 10;
+//
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
 //}
 
 //#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
-//	const char* s = "Hello"; // literal 상수
 //
-//	printf("string : %s\n", s);
+//	int arr[4] = { 10,20,30,40 };
+//
+//	int* p = (int*)malloc(sizeof(int)*4);
+//	p[0] = 10;
+//	p[1] = 20;
+//	p[2] = 30;
+//	p[3] = 40;
+//
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
 //}
 
 //#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
-//    char s[4] = { 'A', 'B', 'C', 'D'};
+//	int* p = (int*)malloc(sizeof(int) * 4);
+//	p[0] = (0+1)*10;
+//	p[1] = (1+1)*10;
+//	p[2] = (2+1)*10;
+//	p[3] = (3+1)*10;
 //
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
+//
+//	printf("%d %d %d %d\n", arr[0], arr[1], arr[2], arr[3]);
+//	printf("%d %d %d %d\n", p[0], p[1], p[2], p[3]);
+//
+//	free(p);
 //}
 
 //#include <stdio.h>
+//#include <stdlib.h>
 //int main()
 //{
-//    char s[4] = { 'A', 'B', 'C', 'D', '\0'};
+//	int* p = (int*)malloc(sizeof(int) * 4);
+//	for(int i = 0; i < 4; ++i)
+//	p[i] = (i + 1) * 10;
 //
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
+//	for (int i = 0; i < 4; ++i)
+//		printf("%d", p[i]);
+//	printf("\n");
+//
+//	free(p);
 //}
 
 //#include <stdio.h>
-//int main()
+//#include <stdlib.h>
+//int* AllocInteger(int car)
 //{
-//    char s[4] = { 'A', 'B', 'C', 'D', '\0' };
-//
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
-//
-//    printf("%p \n", s);
-//    printf("%s \n", s);
+//	return (int*)malloc(sizeof(int) * car);
 //}
-
-//#include <stdio.h>
-//int main()
+//void InitAreay(int* p, int size)
 //{
-//    char s[4] = { 'A', 'B', 'C', 'D'};
-//
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
-//
-//    printf("%p \n", s);
-//    printf("%s \n", s); //잘못된 코드
+//	for (int i = 0; i < size; ++i)
+//		printf("%d", p[i]);
+//	printf("\n")
 //}
-
-//#include <stdio.h>
-//int main()
+//void printAreay(int* p, int size)
 //{
-//    char s[5] = { 'A', 'B', 'C', 'D' };
-//
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
-//
-//    printf("%p \n", s);
-//    printf("%s \n", s); 
+//	for (int i = 0; i < size; ++i)
+//		printf("%d", p[i]);
+//	printf("\n")
 //}
-
-//#include <stdio.h>
-//int main()
+//void FreeInteger(int* p)
 //{
-//    char s[5] = "ABCD"
-//    //char s[5] = { 'A', 'B', 'C', 'D' };
-//
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c %d\n", s[i], s[i]);
-//
-//    printf("%p \n", s);
-//    printf("%s \n", s);
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//    char s1[4] = "ABC";
-//    const char* s2 = "ABC";
-//
-//    s1[0] = 'Z';
-//    //s2[0] = 'Z';
-//
-//    printf("%p %p\n", s1, s2);
-//    printf("%s %s\n", s1, s2);
-//    printf("%s %s\n", s1+1, s2+1);
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//    const char s1[4] = "ABC";
-//    const char* s2 = "ABC";
-//
-//    //s1[0] = 'Z'; 불가능
-//    //s2[0] = 'Z';
-//
-//    printf("%p %p\n", s1, s2);
-//    printf("%s %s\n", s1, s2);
-//    printf("%s %s\n", s1 + 1, s2 + 1);
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//    const char s1[4] = "ABC";
-//    const char* s2 = "ABC";
-//
-//    //s1[0] = 'Z'; 불가능
-//    //s2[0] = 'Z';
-//
-//    printf("%p %p\n", s1, s2);
-//    printf("%c %c\n", s1[1], s2[1]);
-//
-//    for (int i = 0; i < 4; ++i)
-//        printf("%c:%d , %c:%d\n", s1[i], s1[i], s2[i], s2[i]);
-//}
-
-//#include <stdio.h>
-//void PrintString(const char* p)
-//{
-//    printf("string : %s\n", p);
-//    
+//	free(p);
 //}
 //int main()
 //{
-//    const char s1[4] = "ABC";
-//    const char* s2 = "ABC";
-//    
-//    PrintString(s1);
-//    PrintString(s2);
-//    PrintString("hello")
+//	int* p = AllocInteger(4);
 //
-//   
-//  
-//}
-
-//#include <stdio.h> 틀린코드
-//void Printint(int* k)
-//{
-//    printf(" %d \n", *k);
-//    *k = 100;
-//}
-//int main()
-//{
-//    int n = 10;
+//	InitAreay(p, 4);
+//	printAreay(p, 4);
+//	
 //
-//    Printint(&n);
-//    Printint(&n);
-//    Printint(&n);
-//
-//
-//}
-
-////#include <stdio.h>
-////void Printint(const int* k) **const로 변경 싷ㅁ
-////{
-////    printf(" %d \n", *k); //read
-////    //*k = 100; //write
-////}
-////int main()
-////{
-////    int n = 10;
-////
-////    Printint(&n);
-////    Printint(&n);
-////    Printint(&n);
-////
-////
-////}
-
-//#include <stdio.h>
-//void PrintArray(int* arr, int size)
-//{
-//    arr[0] = -99;
-//    for (int i = 0; i < size; ++i)
-//        printf("%d\n", arr[i]);
-//}
-//int main()
-//{
-//    int arr[4] = { 1, 3, 4, 5 };
-//    PrintArray(arr, 4)
-//
-//}
-
-//#include <stdio.h>
-//void PrintArray(const int* arr, int size)
-//{
-//    arr[0] = -99; //W
-//    for (int i = 0; i < size; ++i)
-//        printf("%d\n", arr[i]); //R
-//}
-//int main()
-//{
-//    int arr[4] = { 1, 3, 4, 5 };
-//    PrintArray(arr, 4);
-//
-//}
-
-//#include <stdio.h>
-//void PrintString(char* arr)
-//{
-//        printf("%s\n", arr);
-//}
-//int main()
-//{
-//    //char arr[] = { 'H', 'e', 'l', 'l', 'o', '\0' };
-//    char arr[] = "Hello";
-//
-//    PrintString(arr);
-//
-//}
-
-//#include <stdio.h>
-//void PrintString(char* arr)
-//{
-//    arr[0] = 'a'; //틀림
-//    printf("%s\n", arr);
-//}
-//int main()
-//{
-//    //char arr[] = { 'H', 'e', 'l', 'l', 'o', '\0' };
-//    char arr[] = "Hello";
-//
-//    PrintString(arr);
-//
+//	free(p);
 //}
 
 #include <stdio.h>
-void PrintString(const char* arr)
+#include <stdlib.h>
+int* AllocInteger(int car)
 {
-    //arr[0] = 'a'; //틀림
-    printf("%s\n", arr);
+	return (int*)malloc(sizeof(int) * car);
+}
+void InitAreay(int* p, int size)
+{
+	for (int i = 0; i < size; ++i)
+		printf("%d", p[i]);
+	printf("\n")
+}
+void printAreay(int* p, int size)
+{
+	for (int i = 0; i < size; ++i)
+		printf("%d", p[i]);
+	printf("\n")
+}
+void FreeArray(int* p)
+{
+	free(p);
 }
 int main()
 {
-    //char arr[] = { 'H', 'e', 'l', 'l', 'o', '\0' };
-    char arr[] = "Hello";
+	int* p = AllocArray(4);
 
-    PrintString(arr);
+	InitAreay(p, 4);
+	printAreay(p, 4);
 
+
+	free(p);
 }
