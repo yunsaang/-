@@ -139,20 +139,94 @@
 //
 //}
 
+//#include <stdio.h>
+//#include <stdlib.h> 
+//#include <string.h>
+//int main()
+//{
+//	char* s1;
+//	char s2[10];
+//
+//	s1 = (char*)malloc(10); 13인가 14 클래스 문자 + 0 복사
+//	if (s1 == NULL) 
+//		return -1;
+//
+//	strcpy(s1, "hello");
+//	strcpy(s2, "hello");
+//
+//
+//}
+
+//#include <stdio.h>
+//{
+//	int n = 10;
+//	const int cn = 10;
+//
+//	printf("%d %d\n", n, cn);
+//	n = 20;
+//	cn = 20;
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int k = 0;
+//	int n = 10;
+//	int* p = &n;
+//
+//	n = 20;
+//	*p = 30;
+//
+//	p = &k;
+//
+//	printf("%d %d\n", n, *p);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int k = 0;
+//	int n = 10;
+//	//int* const p = &n;
+//	//const int* const p = &n;
+//	const int* p = &n;
+//
+//	n = 20;
+//	*p = 30;
+//
+//	p = &k;
+//
+//	printf("%d %d\n", n, *p);
+//}
+
+//#include <stdio.h>
+//void PrintData(int* p)
+//{
+//	*p = 8;
+//	printf("[%p] : %d\n", p, *p);
+//}
+//int main()
+//{
+//	int n = 100;
+//
+//	PrintData(&n);
+//	PrintData(&n);
+//	PrintData(&n);
+//	PrintData(&n);
+//}
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+void PrintData(const int* p)
+{
+	*p = 8;
+	printf("[%p] : %d\n", p, *p);
+}
 int main()
 {
-	char* s1;
-	char s2[10];
+	int n = 100;
 
-	s1 = (char*)malloc(10);
-	if (s1 == NULL) 
-		return -1;
-
-	strcpy(s1, "hello");
-	strcpy(s2, "hello");
-
-
+	PrintData(&n);
+	PrintData(&n);
+	PrintData(&n);
+	PrintData(&n);
 }
