@@ -1,314 +1,158 @@
 //#include <stdio.h>
 //int main()
 //{
-//	return 0; //종료 코드(0)
+//	int n = 100;
+//	double d = 5.5;
+//	const char* s = "hello";
+//
+//	printf("%d\n, n"); 
+//	printf("%g\n, d");
+//	printf("%s\n, s"); 
 //}
 
 //#include <stdio.h>
-//void* Readfile()
-//{
-//	return NULL;
-//}
 //int main()
 //{
-//	if(NULL == ReadFile()
-//		return -1;
+//	int n = 100;
+//	double d = 5.5;
+//	const char* s = "hello";
 //
-//		//정상 처리 
-//
-//	return 0; //종료 코드(0)
+//	printf("%d\n, n");
+//	printf("%g\n, d");
+//	printf("%s\n, s");
 //}
 
 //#include <stdio.h>
-//void print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
 //int main()
 //{
-//	int a = 10;
-//	int b = 20;
+//	int n = 100;
+//	double d = 5.5;
+//	const char* s = "hello";
 //
-//	print(a, b);
-//	//
-//	a = b;
-//	b = a;
-//	print(a, b);
+//	printf("%p\n, &n");
+//	printf("%p\n, &d");
+//	printf("%p\n, &s");
+//	printf("%p\n, s");
+//
 //}
 
 //#include <stdio.h>
-//void print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
 //int main()
 //{
-//	int a = 10;
-//	int b = 20;
-//
-//	print(a, b);
-//	Swap(&a, &b);
-//	print(a, b);
-//}
-
-//#include <stdio.h>
-//void Print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//int main()
-//{
-//	int a = 10;
-//	int b = 20;
-//
-//	Print(a, b);
-//	Swap(&a, &b);
-//	Print(a, b);
-//}
-
-//#include <stdio.h>
-//void Print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//int main()
-//{
-//	int n = 10;
-//	int arr[3] = { 1,2,3 };
-//
-//	printf("%p\n", &n);
-//	printf("%p\n", arr);
-//	printf("%p\n", Print);
-//	printf("%p\n", Swap);
-//}
-
-//#include <stdio.h>
-//void Print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//int main()
-//{
-//	int n = 10;
+//	int n = 100;
 //	int* p1 = &n;
 //
-//	void (*p2)(int, int);
-//	p2 = Print;
+//	printf("%d %d\n", n, *p1);
+//	printf("%d %d\n", &n, p1);
 //
-//	int arr[3] = { 1,2,3 };
-//
-//	printf("%p\n", &n);
-//	printf("%p\n", arr);
-//	printf("%p\n", Print);
-//	printf("%p\n", Swap);
 //}
 
 //#include <stdio.h>
-//void Print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
+//#include <stdlib.h>
 //int main()
 //{
-//	int n = 10;
-//	int* p1 = &n;
+//	int* p1 = (int*)malloc(sizeof(int));
 //
-//	void (*p2)(int, int);
-//	p2 = Print;
+//	*p1 = 100;
+//	printf("%d\n", *p1);
 //
-//	int arr[3] = { 1,2,3 };
+//	free(p1);
 //
-//	printf("%p\n", *p1);
-//	printf(1,2);
+//
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	int a[4] = { 11, 12, 13, 14 };
+//	int* b = NULL;
+//
+//	b = (int*)malloc(sizeof(int) * 4);
+//	b[0] = 11;
+//	b[1] = 12;
+//	b[3] = 13;
+//	b[4] = 14;
+//
+//	for (int i = 0; i < 4; i++)
+//		printf("%d %d\n", a[i], b[i]);
+//
+//
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	const char* s1 = "hello";
+//	const char s2[] = "hello";
 //	
-//}
-
-//#include <stdio.h>
-//void Print(int a, int b)
-//{
-//	printf("%d , %d\n", a, b);
-//}
-//void Swap(int* pa, int* pb)
-//{
-//	int t = *pa;
-//	*pa = *pb;
-//	*pb = t;
-//}
-//int main()
-//{
-//	int a = 10, b = 20;
+//	//s1[0] = 'A';
+//	//s2[0] = 'A';
 //
-//	Print(a, b);
-//	Swap(&a, &b);
-//	Print(a, b);
+//	printf("%s %s\n", s1, s2);
+//	printf("%p %p\n", s1, s2);
 //
-//	void (*pPrint)(int a, int b) = Print;
-//	void (*pSwap)(int* pa, int* pb) = Swap;
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	char* s1;
+//	char s2[10];
 //
-//	pPrint(a, b);
-//	pSwap(&a, &b);
-//	pPrint(a, b);
-//}
-
-//#include <stdio.h>
-//void PrintData(const int* pa, int size)
-//{
-//	for (int i = 0; i < size; ++i)
-//		printf("[%d]", pa[i]);
-//	printf("\n");
-//}
-////client
-//int main()
-//{
-//	int a[10] = { 10, 50, 80, 30, 45, 62, 53, 42, 43, 70 };
-//	PrintData(a, 10);
-//}
-
-//#include <stdio.h>
-//void PrintData(const int* pa, int size, void (*pf)(int ))
-//{
-//	for (int i = 0; i < size; ++i)
-//		pf(pa[i]);
-//	printf("\n");
-//}
-////client
-//void Print1(int data)
-//{
-//	if (data % 2 == 0)
-//		printf("[%d]", data);
-//}
-//int main()
-//{
-//	int a[10] = { 10, 50, 80, 30, 45, 62, 53, 42, 43, 70 };
-//	PrintData(a, 10, Print1);
-//}
-
-//#include <stdio.h>
-////server
-//void PrintData(const int* pa, int size, void (*pf)(int))
-//{
-//	for (int i = 0; i < size; ++i)
-//		pf(pa[i]); //server -> client (callback)
-//	printf("\n");
-//}
-////client
-//void Print1(int data) //callback function
-//{
-//	if (data % 2 == 0)
-//		printf("[%d]", data);
-//}
-//void Print2(int data)
-//{
-//	printf("[%d]", data);
-//}
-//void Print3(int data)
-//{
-//	printf("==");
-//	printf("[%d]", data);
-//	printf("==\n");
-//}
-//int main()
-//{
-//	int a[10] = { 10, 50, 80, 30, 45, 62, 53, 42, 43, 70 };
-//	PrintData(a, 10, Print1); //client -> server(call)
-//	PrintData(a, 10, Print2);
-//	PrintData(a, 10, Print3);
-//}
-
-//#include <stdio.h>
-////server
-//int FindData(int* pa, int size, int key)
-//{
-//	for (int i = 0; i < size; ++i)
-//		if (pa[i] == key)
-//			return i;
-//	return -1;
-//}
-////client
-//int main()
-//{
-//	int arr[10] = { 5,64,98,25,35,74,69,88,85,27 };
-//	int index = FindData(arr, 10, 74);
+//	s1 = (char*)malloc(10);
+//	s1 < -"hello";
 //
-//	if (index != -1)
-//	{
-//		printf("[%d] : %d\n", index, arr[index]);
-//	}
+//	s1[0] = 'h'; 
+//	s1[1] = 'e';
+//	s1[2] = 'l';
+//	s1[3] = 'l';
+//	s1[4] = 'o';
+//	s1[5] = '\0';
+//
+//	s2[0] = 'h';// < -"hello";
+//	s2[1] = 'e';
+//	s2[2] = 'l';
+//	s2[3] = 'l';
+//	s2[4] = 'o';
+//	s2[5] = '\0';
+//
+//	printf("%s %s\n", s1, s2);
+//	printf("%p %p\n", s1, s2);
+//
 //}
 
 //#include <stdio.h>
-////server
-//int FindData(int* pa, int size, int key)
-//{
-//	for (int i = 0; i < size; ++i)
-//		if (pa[i] == key)
-//			return i;
-//	return -1;
-//}
-////client
+//#include <stdlib.h>
+//#include <string.h>
 //int main()
 //{
-//	int arr[10] = { 5,64,98,25,35,74,69,88,85,27 };
-//	int index = FindData(arr, 10, 74);
+//	char* s1;
+//	char s2[10];
 //
-//	if (index != -1)
-//	{
-//		printf("[%d] : %d\n", index, arr[index]);
-//	}
+//	s1 = (char*)malloc(10);
+//	strcpy(s1, "hello");
+//	strcpy(s2, "hello");
+//
+//
 //}
 
 #include <stdio.h>
-//server
-int FindData(int* pa, int size, int (*cmp(int))
-{
-	for (int i = 0; i < size; ++i)
-		if (cmp(pa[i]))
-			return i;
-
-	return -1;
-}
-//client
-int Predicate1(int key)
-{
-	return key > 50 && key % 5 == 0;
-}
+#include <stdlib.h>
+#include <string.h>
 int main()
 {
-	int arr[10] = { 5,64,98,25,35,74,69,88,85,27 };
-	int index = FindData(arr, 10, 74);
+	char* s1;
+	char s2[10];
 
-	if (index != -1)
-	{
-		printf("[%d] : %d\n", index, arr[index]);
-	}
+	s1 = (char*)malloc(10);
+	if (s1 == NULL) 
+		return -1;
+
+	strcpy(s1, "hello");
+	strcpy(s2, "hello");
+
+
 }
