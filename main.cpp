@@ -1,232 +1,225 @@
 //#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
 //int main()
 //{
-//	int n = 100;
-//	double d = 5.5;
-//	const char* s = "hello";
-//
-//	printf("%d\n, n"); 
-//	printf("%g\n, d");
-//	printf("%s\n, s"); 
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	int n = 100;
-//	double d = 5.5;
-//	const char* s = "hello";
-//
-//	printf("%d\n, n");
-//	printf("%g\n, d");
-//	printf("%s\n, s");
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	int n = 100;
-//	double d = 5.5;
-//	const char* s = "hello";
-//
-//	printf("%p\n, &n");
-//	printf("%p\n, &d");
-//	printf("%p\n, &s");
-//	printf("%p\n, s");
+//	int a = 10;
+//	Point pt = { 0,0 };
 //
 //}
 
 //#include <stdio.h>
+//struct Point // Íµ¨Ï°∞Ï≤¥ Ï†ïÏùò
+//{
+//	int x;
+//	int y;
+//};
+//struct PointD // Íµ¨Ï°∞Ï≤¥ Ï†ïÏùò
+//{
+//	double x;
+//	double y;
+//};
 //int main()
 //{
-//	int n = 100;
-//	int* p1 = &n;
+//	int a = 10; // Ï†ïÏàò ÌòïÏãù a Î≥ÄÏàò
+//	Point pt = { 0,0 }; // point ÌòïÏãù pt Î≥ÄÏàò
+//	PointD pt2 = { 0.2,0.75 }; // point ÌòïÏãù pt Î≥ÄÏàò
 //
-//	printf("%d %d\n", n, *p1);
-//	printf("%d %d\n", &n, p1);
+//	printf("%d\n", a);
+//	printf("%d, %d\n", pt.x, pt.y);
+//	printf("%g, %g\n", pt2.x, pt2.y);
 //
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//int main()
-//{
-//	int* p1 = (int*)malloc(sizeof(int));
-//
-//	*p1 = 100;
-//	printf("%d\n", *p1);
-//
-//	free(p1);
 //
 //
 //}
 
 //#include <stdio.h>
-//#include <stdlib.h>
+//
 //int main()
 //{
-//	int a[4] = { 11, 12, 13, 14 };
-//	int* b = NULL;
+//	int x1 = 2;
+//	int y1 = 2;
+//	int x2 = 4;
+//	int y2 = 1;
+//	int x3 = 4;
+//	int y3 = 4;
 //
-//	b = (int*)malloc(sizeof(int) * 4);
-//	b[0] = 11;
-//	b[1] = 12;
-//	b[3] = 13;
-//	b[4] = 14;
+//	printf("%d, %d\n", x1, y1);
+//	printf("%d, %d\n", x2, y2);
+//	printf("%d, %d\n", x3, y3);
 //
-//	for (int i = 0; i < 4; i++)
-//		printf("%d %d\n", a[i], b[i]);
 //
 //
 //}
 
 //#include <stdio.h>
-//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
 //int main()
 //{
-//	const char* s1 = "hello";
-//	const char s2[] = "hello";
-//	
-//	//s1[0] = 'A';
-//	//s2[0] = 'A';
+//	Point pt1 = { 2,2 };
+//	Point pt2 = { 4,1 };
+//	Point pt3 = { 4,4 };
+//	Point ptArray[3] = { {1,2}, {5,4}, {7,9} };
 //
-//	printf("%s %s\n", s1, s2);
-//	printf("%p %p\n", s1, s2);
+//
+//	printf("%d, %d\n", pt1.x, pt1.y);
+//	printf("%d, %d\n", pt2.x, pt2.y);
+//	printf("%d, %d\n", pt3.x, pt3.y);
+//	printf("%d, %d\n", ptArray[0].x, ptArray[0].y);
+//	printf("%d, %d\n", ptArray[1].x, ptArray[1].y);
+//	printf("%d, %d\n", ptArray[2].x, ptArray[2].y);
 //
 //}
 
 //#include <stdio.h>
-//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
 //int main()
 //{
-//	char* s1;
-//	char s2[10];
+//	Point pt1 = { 2,2 };
+//	Point pt2 = { 4,1 };
+//	Point pt3 = { 4,4 };
+//	Point ptArray[3] = { {1,2}, {5,4}, {7,9} };
 //
-//	s1 = (char*)malloc(10);
-//	s1 < -"hello";
 //
-//	s1[0] = 'h'; 
-//	s1[1] = 'e';
-//	s1[2] = 'l';
-//	s1[3] = 'l';
-//	s1[4] = 'o';
-//	s1[5] = '\0';
-//
-//	s2[0] = 'h';// < -"hello";
-//	s2[1] = 'e';
-//	s2[2] = 'l';
-//	s2[3] = 'l';
-//	s2[4] = 'o';
-//	s2[5] = '\0';
-//
-//	printf("%s %s\n", s1, s2);
-//	printf("%p %p\n", s1, s2);
-//
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//#include <string.h>
-//int main()
-//{
-//	char* s1;
-//	char s2[10];
-//
-//	s1 = (char*)malloc(10);
-//	strcpy(s1, "hello");
-//	strcpy(s2, "hello");
+//	printf("%d\n", sizeof(int));
+//	printf("%d\n", sizeof(Point));
+//	printf("%d\n", sizeof(pt1.x));
+//	printf("%d\n", sizeof(pt1));
 //
 //
 //}
 
 //#include <stdio.h>
-//#include <stdlib.h> 
-//#include <string.h>
-//int main()
+//struct Point
 //{
-//	char* s1;
-//	char s2[10];
-//
-//	s1 = (char*)malloc(10); 13¿Œ∞° 14 ≈¨∑°Ω∫ πÆ¿⁄ + 0 ∫πªÁ
-//	if (s1 == NULL) 
-//		return -1;
-//
-//	strcpy(s1, "hello");
-//	strcpy(s2, "hello");
-//
-//
-//}
-
-//#include <stdio.h>
+//	int x;
+//	int y;
+//};
+//void PrintPoint(Point pt)
 //{
-//	int n = 10;
-//	const int cn = 10;
-//
-//	printf("%d %d\n", n, cn);
-//	n = 20;
-//	cn = 20;
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	int k = 0;
-//	int n = 10;
-//	int* p = &n;
-//
-//	n = 20;
-//	*p = 30;
-//
-//	p = &k;
-//
-//	printf("%d %d\n", n, *p);
-//}
-
-//#include <stdio.h>
-//int main()
-//{
-//	int k = 0;
-//	int n = 10;
-//	//int* const p = &n;
-//	//const int* const p = &n;
-//	const int* p = &n;
-//
-//	n = 20;
-//	*p = 30;
-//
-//	p = &k;
-//
-//	printf("%d %d\n", n, *p);
-//}
-
-//#include <stdio.h>
-//void PrintData(int* p)
-//{
-//	*p = 8;
-//	printf("[%p] : %d\n", p, *p);
+//   printf("(%d %d)\n", pt.x, pt.y);
 //}
 //int main()
 //{
-//	int n = 100;
+//	Point pt1 = { 2,2 };
 //
-//	PrintData(&n);
-//	PrintData(&n);
-//	PrintData(&n);
-//	PrintData(&n);
+//	printf("(%d %d)\n", pt1.x, pt1.y);
+//	printf("(%d %d)\n", pt1.x, pt1.y);
+//	PrintPoint(pt1);
+//	PrintPoint(pt1);
 //}
+
+//#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//void PrintPoint(Point pt)
+//{
+//	printf("(%d %d)\n", pt.x, pt.y);
+//}
+//int main()
+//{
+//	Point pt1 = { 2,2 };
+//
+//	PrintPoint(pt1);
+//	PrintPoint(pt1);
+//}
+
+//#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//void PrintPoint(Point* p)
+//{
+//	printf("(%d %d)\n", p->x, p->y);
+//}
+//int main()
+//{
+//	Point pt1 = { 2,2 };
+//
+//	PrintPoint(&pt1);
+//	PrintPoint(&pt1);
+//}
+
+//#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//void PrintPoint(Point* p)
+//{
+//	printf("(%d %d)\n", p->x, p->y);
+//}
+//void ResetPoint(Point* target, int x, int y)
+//{
+//	target->x = x;
+//	target->y = y;
+//	// _log_...
+//}
+//int main()
+//{
+//	Point pt1 = { 2,2 };
+//
+//
+//	PrintPoint(&pt1);
+//
+//	//pt1 = { 5,9 };
+//	ResetPoint(&pt1, 5, 9);
+//
+//	PrintPoint(&pt1);
+//}
+
+//#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//int main()
+//{ 
+//	Point pt = { 1,2 };
+//	Point* p = &pt;
+//
+//	printf("%d, %d\n", pt.x, pt.y);
+//	printf("%d, %d\n", (&pt)->x, (&pt)->y);
+//	printf("%d, %d\n", p->x, p->y);
+//	printf("%d, %d\n", (*p).x, (*p).y);
+//
 
 #include <stdio.h>
-void PrintData(const int* p)
+struct Point
 {
-	*p = 8;
-	printf("[%p] : %d\n", p, *p);
-}
+	int x;
+	int y;
+};
 int main()
 {
-	int n = 100;
+	Point pt = { 1,2 };
+	Point* p = &pt;
+	Point* p2 = &pt;
+	Point* p3 = p;
 
-	PrintData(&n);
-	PrintData(&n);
-	PrintData(&n);
-	PrintData(&n);
+
+	printf("%d, %d\n", pt.x, pt.y);
+	printf("%d, %d\n", (&pt)->x, (&pt)->y);
+	printf("%d, %d\n", p->x, p->y);
+	printf("%d, %d\n", p2->x, p2->y);
+	printf("%d, %d\n", p3->x, p3->y);
+	
 }
