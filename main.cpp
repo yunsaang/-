@@ -249,6 +249,33 @@
 //	free(per1.phone);
 //}
 
+//#include <stdio.h> 
+//#include <stdlib.h>
+//#include <string.h>
+//struct Person
+//{
+//	char name[20];
+//	char phone[20];
+//};
+////struct Person
+////{
+////	char* name;
+////	char* phone;
+////
+////};
+//int main()
+//{
+//	Person per1;
+//
+//
+//	strcpy(per1.name, "hong");
+//	strcpy(per1.phone, "010-1234-1111");
+//
+//
+//
+//	printf("name : %s, phone : %s\n", per1.name, per1.phone);
+//}
+
 #include <stdio.h> 
 #include <stdlib.h>
 #include <string.h>
@@ -265,6 +292,13 @@ struct Person
 //};
 int main()
 {
+	char name[20];
+	char phone[20];
+
+	printf("이름 입력:");
+	fgets(name,20,stdin);
+	printf("전화 입력:");
+	fgets(phone,20,stdin);
 	Person per1;
 
 
