@@ -1,103 +1,42 @@
 //#include <stdio.h>
-//struct Point
+//struct point
 //{
 //	int x;
 //	int y;
 //};
 //int main()
 //{
-//	int a = 10;
-//	Point pt = { 0,0 };
+//	point pt1 = { 1,2 };
+//	point pt2 = { 4,5 };
+//
+//	printf("%d %d\n", pt1.x, pt1.y);
+//	printf("%d %d\n", pt2.x, pt2.y);
 //
 //}
 
 //#include <stdio.h>
-//struct Point // 구조체 정의
-//{
-//	int x;
-//	int y;
-//};
-//struct PointD // 구조체 정의
-//{
-//	double x;
-//	double y;
-//};
-//int main()
-//{
-//	int a = 10; // 정수 형식 a 변수
-//	Point pt = { 0,0 }; // point 형식 pt 변수
-//	PointD pt2 = { 0.2,0.75 }; // point 형식 pt 변수
-//
-//	printf("%d\n", a);
-//	printf("%d, %d\n", pt.x, pt.y);
-//	printf("%g, %g\n", pt2.x, pt2.y);
-//
-//
-//
-//}
-
-//#include <stdio.h>
-//
-//int main()
-//{
-//	int x1 = 2;
-//	int y1 = 2;
-//	int x2 = 4;
-//	int y2 = 1;
-//	int x3 = 4;
-//	int y3 = 4;
-//
-//	printf("%d, %d\n", x1, y1);
-//	printf("%d, %d\n", x2, y2);
-//	printf("%d, %d\n", x3, y3);
-//
-//
-//
-//}
-
-//#include <stdio.h>
-//struct Point
+//struct point
 //{
 //	int x;
 //	int y;
 //};
 //int main()
 //{
-//	Point pt1 = { 2,2 };
-//	Point pt2 = { 4,1 };
-//	Point pt3 = { 4,4 };
-//	Point ptArray[3] = { {1,2}, {5,4}, {7,9} };
+//	point pt1 = { 1,2 };
+//	point pt2 = { 4,5 };
+//	point* p1 = NULL, *p2 = NULL;
+//
+//	p1 = &pt1;
+//	p2 = &pt2;
 //
 //
-//	printf("%d, %d\n", pt1.x, pt1.y);
-//	printf("%d, %d\n", pt2.x, pt2.y);
-//	printf("%d, %d\n", pt3.x, pt3.y);
-//	printf("%d, %d\n", ptArray[0].x, ptArray[0].y);
-//	printf("%d, %d\n", ptArray[1].x, ptArray[1].y);
-//	printf("%d, %d\n", ptArray[2].x, ptArray[2].y);
-//
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//int main()
-//{
-//	Point pt1 = { 2,2 };
-//	Point pt2 = { 4,1 };
-//	Point pt3 = { 4,4 };
-//	Point ptArray[3] = { {1,2}, {5,4}, {7,9} };
-//
-//
-//	printf("%d\n", sizeof(int));
-//	printf("%d\n", sizeof(Point));
-//	printf("%d\n", sizeof(pt1.x));
 //	printf("%d\n", sizeof(pt1));
-//
-//
+//	printf("%d\n", sizeof(p1));
+//	printf("%d %d\n", pt1.x, pt1.y);
+//	printf("%d %d\n", pt2.x, pt2.y);
+//	printf("%d %d\n", p1->x, p1->y);
+//	printf("%d %d\n", p2->x, p2->y);
+
 //}
 
 //#include <stdio.h>
@@ -106,120 +45,233 @@
 //	int x;
 //	int y;
 //};
+//
 //void PrintPoint(Point pt)
 //{
-//   printf("(%d %d)\n", pt.x, pt.y);
-//}
-//int main()
-//{
-//	Point pt1 = { 2,2 };
-//
-//	printf("(%d %d)\n", pt1.x, pt1.y);
-//	printf("(%d %d)\n", pt1.x, pt1.y);
-//	PrintPoint(pt1);
-//	PrintPoint(pt1);
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//void PrintPoint(Point pt)
-//{
-//	printf("(%d %d)\n", pt.x, pt.y);
-//}
-//int main()
-//{
-//	Point pt1 = { 2,2 };
-//
-//	PrintPoint(pt1);
-//	PrintPoint(pt1);
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//void PrintPoint(Point* p)
-//{
-//	printf("(%d %d)\n", p->x, p->y);
-//}
-//int main()
-//{
-//	Point pt1 = { 2,2 };
-//
-//	PrintPoint(&pt1);
-//	PrintPoint(&pt1);
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//void PrintPoint(Point* p)
-//{
-//	printf("(%d %d)\n", p->x, p->y);
-//}
-//void ResetPoint(Point* target, int x, int y)
-//{
-//	target->x = x;
-//	target->y = y;
-//	// _log_...
-//}
-//int main()
-//{
-//	Point pt1 = { 2,2 };
-//
-//
-//	PrintPoint(&pt1);
-//
-//	//pt1 = { 5,9 };
-//	ResetPoint(&pt1, 5, 9);
-//
-//	PrintPoint(&pt1);
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//int main()
-//{ 
-//	Point pt = { 1,2 };
-//	Point* p = &pt;
-//
 //	printf("%d, %d\n", pt.x, pt.y);
-//	printf("%d, %d\n", (&pt)->x, (&pt)->y);
-//	printf("%d, %d\n", p->x, p->y);
-//	printf("%d, %d\n", (*p).x, (*p).y);
+//}
+//int main()
+//{
+//	Point pt1 = { 1,2 };
+//	Point pt2 = { 4,5 };
+//	Point* p1 = &pt1, * p2 = &pt2;
 //
+//	PrintPoint(pt1);
+//	PrintPoint(pt2);
+//	PrintPoint(*p1);
+//	PrintPoint(*p2);
+//}
 
-#include <stdio.h>
-struct Point
+
+//#include <stdio.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//
+//void PrintPoint(Point* p)
+//{
+//	printf("%d, %d\n", p->x, p->y);
+//}
+//int main()
+//{
+//	Point pt1 = { 1,2 };
+//	Point pt2 = { 4,5 };
+//	Point* p1 = &pt1, * p2 = &pt2;
+//
+//	PrintPoint(&pt1);
+//	PrintPoint(&pt2);
+//	PrintPoint(p1);
+//	PrintPoint(p2);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//
+//void PrintPoint(Point* p)
+//{
+//	printf("%d, %d\n", p->x, p->y);
+//}
+//int main()
+//{
+//	Point* p1 = (Point*) malloc(sizeof(Point));
+//	Point* p2 = (Point*) malloc(sizeof(Point));
+//
+//	p1->x = 1;
+//	p1->y = 2;
+//	p2->x = 4;
+//	p2->y = 5;
+//
+//	PrintPoint(p1);
+//	PrintPoint(p2);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//typedef Point* PPoint;
+//
+//void PrintPoint(PPoint p)
+//{
+//	printf("%d, %d\n", p->x, p->y);
+//}
+//int main()
+//{
+//	PPoint p1 = (PPoint)malloc(sizeof(Point));
+//	PPoint p2 = (PPoint)malloc(sizeof(Point));
+//
+//	p1->x = 1;
+//	p1->y = 2;
+//	p2->x = 4;
+//	p2->y = 5;
+//
+//	PrintPoint(p1);
+//	PrintPoint(p2);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//typedef Point* PPoint;
+//
+//void SetPoint(PPoint p, int x, int y)
+//{
+//	p->x = x;
+//	p->y = y;
+//}
+//void PrintPoint(PPoint p)
+//{
+//	printf("%d, %d\n", p->x, p->y);
+//}
+//int main()
+//{
+//	PPoint p1 = (PPoint)malloc(sizeof(Point));
+//	PPoint p2 = (PPoint)malloc(sizeof(Point));
+//
+//	SetPoint(p1, 1, 2);
+//	SetPoint(p2, 4, 5);
+//
+//	
+//
+//	PrintPoint(p1);
+//	PrintPoint(p2);
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//struct Point
+//{
+//	int x;
+//	int y;
+//};
+//typedef Point* PPoint;
+//
+//void SetPoint(PPoint p, int x, int y)
+//{
+//	p->x = x;
+//	p->y = y;
+//}
+//void PrintPoint(PPoint p)
+//{
+//	printf("%d, %d\n", p->x, p->y);
+//}
+//PPoint AllocPoint()
+//{
+//	PPoint P = (PPoint)malloc(sizeof(Point));
+//	return P;
+//}
+//void FreePoint(PPoint p)
+//{
+//	free(p);
+//}
+//int main()
+//{
+//	PPoint p1 = AllocPoint();
+//	PPoint p2 = AllocPoint();
+//
+//
+//	SetPoint(p1, 1, 2);
+//	SetPoint(p2, 4, 5);
+//
+//
+//
+//	PrintPoint(p1);
+//	PrintPoint(p2);
+//
+//	FreePoint(p1);
+//	FreePoint(p2);
+//
+//}
+
+//#include <stdio.h> ///////////////////// 매모리 그림 heap는 "hong" "010-1234-1111"
+//#include <stdlib.h>
+//#include <string.h>
+////struct Person
+////{
+////	char name[20];
+////	char phone[20];
+////};
+//struct Person
+//{
+//	char* name;
+//	char* phone;
+//
+//};
+//int main()
+//{
+//	Person per1 = { NULL,NULL };
+//
+//	per1.name = (char*)malloc(strlen("hong") + 1);
+//	strcpy(per1.name, "hong");
+//	per1.phone = (char*)malloc(strlen("010-1234-1111") + 1);
+//	strcpy(per1.phone, "010-1234-1111");
+//	
+//
+//
+//	printf("name : %s, phone : %s\n", per1.name, per1.phone);
+//
+//
+//	free(per1.name);
+//	free(per1.phone);
+//}
+
+#include <stdio.h> 
+#include <stdlib.h>
+#include <string.h>
+struct Person
 {
-	int x;
-	int y;
+	char name[20];
+	char phone[20];
 };
+//struct Person
+//{
+//	char* name;
+//	char* phone;
+//
+//};
 int main()
 {
-	Point pt = { 1,2 };
-	Point* p = &pt;
-	Point* p2 = &pt;
-	Point* p3 = p;
+	Person per1;
 
 
-	printf("%d, %d\n", pt.x, pt.y);
-	printf("%d, %d\n", (&pt)->x, (&pt)->y);
-	printf("%d, %d\n", p->x, p->y);
-	printf("%d, %d\n", p2->x, p2->y);
-	printf("%d, %d\n", p3->x, p3->y);
-	
+	strcpy(per1.name, "hong");
+	strcpy(per1.phone, "010-1234-1111");
+
+
+
+	printf("name : %s, phone : %s\n", per1.name, per1.phone);
 }
