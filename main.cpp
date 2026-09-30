@@ -1,311 +1,482 @@
 //#include <stdio.h>
-//struct point
-//{
-//	int x;
-//	int y;
-//};
 //int main()
 //{
-//	point pt1 = { 1,2 };
-//	point pt2 = { 4,5 };
-//
-//	printf("%d %d\n", pt1.x, pt1.y);
-//	printf("%d %d\n", pt2.x, pt2.y);
-//
+//	char buf[100] = "";
+//	printf("%d", buf[0]);
 //}
 
+//#pragma warning(disable:4996)
 //#include <stdio.h>
-//struct point
-//{
-//	int x;
-//	int y;
-//};
-//int main()
-//{
-//	point pt1 = { 1,2 };
-//	point pt2 = { 4,5 };
-//	point* p1 = NULL, *p2 = NULL;
-//
-//	p1 = &pt1;
-//	p2 = &pt2;
-//
-//
-//	printf("%d\n", sizeof(pt1));
-//	printf("%d\n", sizeof(p1));
-//	printf("%d %d\n", pt1.x, pt1.y);
-//	printf("%d %d\n", pt2.x, pt2.y);
-//	printf("%d %d\n", p1->x, p1->y);
-//	printf("%d %d\n", p2->x, p2->y);
-
-//}
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//
-//void PrintPoint(Point pt)
-//{
-//	printf("%d, %d\n", pt.x, pt.y);
-//}
-//int main()
-//{
-//	Point pt1 = { 1,2 };
-//	Point pt2 = { 4,5 };
-//	Point* p1 = &pt1, * p2 = &pt2;
-//
-//	PrintPoint(pt1);
-//	PrintPoint(pt2);
-//	PrintPoint(*p1);
-//	PrintPoint(*p2);
-//}
-
-
-//#include <stdio.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//
-//void PrintPoint(Point* p)
-//{
-//	printf("%d, %d\n", p->x, p->y);
-//}
-//int main()
-//{
-//	Point pt1 = { 1,2 };
-//	Point pt2 = { 4,5 };
-//	Point* p1 = &pt1, * p2 = &pt2;
-//
-//	PrintPoint(&pt1);
-//	PrintPoint(&pt2);
-//	PrintPoint(p1);
-//	PrintPoint(p2);
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//
-//void PrintPoint(Point* p)
-//{
-//	printf("%d, %d\n", p->x, p->y);
-//}
-//int main()
-//{
-//	Point* p1 = (Point*) malloc(sizeof(Point));
-//	Point* p2 = (Point*) malloc(sizeof(Point));
-//
-//	p1->x = 1;
-//	p1->y = 2;
-//	p2->x = 4;
-//	p2->y = 5;
-//
-//	PrintPoint(p1);
-//	PrintPoint(p2);
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//typedef Point* PPoint;
-//
-//void PrintPoint(PPoint p)
-//{
-//	printf("%d, %d\n", p->x, p->y);
-//}
-//int main()
-//{
-//	PPoint p1 = (PPoint)malloc(sizeof(Point));
-//	PPoint p2 = (PPoint)malloc(sizeof(Point));
-//
-//	p1->x = 1;
-//	p1->y = 2;
-//	p2->x = 4;
-//	p2->y = 5;
-//
-//	PrintPoint(p1);
-//	PrintPoint(p2);
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//typedef Point* PPoint;
-//
-//void SetPoint(PPoint p, int x, int y)
-//{
-//	p->x = x;
-//	p->y = y;
-//}
-//void PrintPoint(PPoint p)
-//{
-//	printf("%d, %d\n", p->x, p->y);
-//}
-//int main()
-//{
-//	PPoint p1 = (PPoint)malloc(sizeof(Point));
-//	PPoint p2 = (PPoint)malloc(sizeof(Point));
-//
-//	SetPoint(p1, 1, 2);
-//	SetPoint(p2, 4, 5);
-//
-//	
-//
-//	PrintPoint(p1);
-//	PrintPoint(p2);
-//}
-
-//#include <stdio.h>
-//#include <stdlib.h>
-//struct Point
-//{
-//	int x;
-//	int y;
-//};
-//typedef Point* PPoint;
-//
-//void SetPoint(PPoint p, int x, int y)
-//{
-//	p->x = x;
-//	p->y = y;
-//}
-//void PrintPoint(PPoint p)
-//{
-//	printf("%d, %d\n", p->x, p->y);
-//}
-//PPoint AllocPoint()
-//{
-//	PPoint P = (PPoint)malloc(sizeof(Point));
-//	return P;
-//}
-//void FreePoint(PPoint p)
-//{
-//	free(p);
-//}
-//int main()
-//{
-//	PPoint p1 = AllocPoint();
-//	PPoint p2 = AllocPoint();
-//
-//
-//	SetPoint(p1, 1, 2);
-//	SetPoint(p2, 4, 5);
-//
-//
-//
-//	PrintPoint(p1);
-//	PrintPoint(p2);
-//
-//	FreePoint(p1);
-//	FreePoint(p2);
-//
-//}
-
-//#include <stdio.h> ///////////////////// 매모리 그림 heap는 "hong" "010-1234-1111"
-//#include <stdlib.h>
 //#include <string.h>
-////struct Person
-////{
-////	char name[20];
-////	char phone[20];
-////};
-//struct Person
-//{
-//	char* name;
-//	char* phone;
-//
-//};
 //int main()
 //{
-//	Person per1 = { NULL,NULL };
+//	char buf[100] = "";
 //
-//	per1.name = (char*)malloc(strlen("hong") + 1);
-//	strcpy(per1.name, "hong");
-//	per1.phone = (char*)malloc(strlen("010-1234-1111") + 1);
-//	strcpy(per1.phone, "010-1234-1111");
-//	
+//	// buf = "ABC"; 틀림
 //
+//	// 첫번째 방법
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
 //
-//	printf("name : %s, phone : %s\n", per1.name, per1.phone);
+//	strcpy(buf, "ABC");
 //
-//
-//	free(per1.name);
-//	free(per1.phone);
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
 //}
 
-//#include <stdio.h> 
-//#include <stdlib.h>
+//#pragma warning(disable:4996)
+//#include <stdio.h>
 //#include <string.h>
-//struct Person
-//{
-//	char name[20];
-//	char phone[20];
-//};
-////struct Person
-////{
-////	char* name;
-////	char* phone;
-////
-////};
 //int main()
 //{
-//	Person per1;
+//	char buf[100] = ""; //{'\0'}
 //
+//	// buf = "ABC";
 //
-//	strcpy(per1.name, "hong");
-//	strcpy(per1.phone, "010-1234-1111");
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
 //
+//	strcpy(buf, "ABC");
 //
-//
-//	printf("name : %s, phone : %s\n", per1.name, per1.phone);
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
 //}
 
-#include <stdio.h> 
-#include <stdlib.h>
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	strcpy(buf, "ABC");
+//
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	strcpy(dest, src);
+//
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//}
+
+//#pragma warning(disable:4996) 메모리 그림 (stack ~ global data 
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	strcpy(dest, src);
+//
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	//strcpy(buf, "ABC");
+//	gets_s(buf,100);
+//
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	//strcpy(buf, "ABC");
+//
+//	printf("input : ");
+//	gets_s(buf, 100);
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//
+//	printf("input : ");
+//	gets_s(buf, 100);
+//	printf("[0] : %d\n", buf[0]);
+//	printf("str : %s\n", buf);
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	//strcpy(buf, "ABC");
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		printf("[0] : %d\n", buf[0]);
+//		printf("str : %s\n", buf);
+//	}
+//	
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	char buf[100] = ""; //{'\0'}
+//	char* dest = buf;
+//	const char* src = "ABC";
+//
+//	// buf = "ABC";
+//
+//	/*buf[0] = 'A';
+//	buf[1] = 'B';
+//	buf[2] = 'C';
+//	buf[3] = '\0';*/
+//
+//	//strcpy(buf, "ABC");
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		else
+//		{
+//			char* s = (char*)malloc(strlen(buf)+1 );
+//			strcpy(s, buf);
+//			printf("[0] : %d\n", buf[0]);
+//			printf("str : %s\n", buf);
+//		}
+//	}
+//
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	char* sarray[10000] = { NULL };
+//	int scount = 0;
+//
+//	char buf[100] = ""; 
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		else
+//		{
+//			char* s = (char*)malloc(strlen(buf) + 1);
+//			strcpy(s, buf);
+//			sarray[scount++] = s;
+//			printf("[0] : %d\n", buf[0]);
+//			printf("str : %s\n", buf);
+//		}
+//	}
+//
+//	printf("count : %d\n", scount);
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//int main()
+//{
+//	char* sarray[10000] = { NULL };
+//	int scount = 0;
+//
+//	char buf[100] = "";
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		else
+//		{
+//			char* s = (char*)malloc(strlen(buf) + 1);
+//			strcpy(s, buf);
+//			sarray[scount++] = s;
+//			printf("[0] : %d\n", buf[0]);
+//			printf("str : %s\n", buf);
+//		}
+//	}
+//
+//	printf("\n");
+//	printf("count : %d\n", scount);
+//	for (int i = 0; i < scount; ++i)
+//		printf("[%d] : %s\n", i, sarray[i]);
+//
+//	for (int i = 0; i < scount; ++i)
+//		free(sarray[i]);
+//
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//struct SDArray
+//{
+//	char* sarray[100];
+//	int scount;
+//};
+//int main()
+//{
+//	SDArray sdarray = { 0 };
+//
+//	char buf[100] = "";
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		else
+//		{
+//			char* s = (char*)malloc(strlen(buf) + 1);
+//			strcpy(s, buf);
+//			sdarray.sarray[sdarray.scount++] = s;
+//			printf("[0] : %d\n", buf[0]);
+//			printf("str : %s\n", buf);
+//		}
+//	}
+//
+//	printf("\n");
+//	printf("count : %d\n", sdarray.scount);
+//	for (int i = 0; i < sdarray.scount; ++i)
+//		printf("[%d] : %s\n", i, sdarray.sarray[i]);
+//
+//	for (int i = 0; i < sdarray.scount; ++i)
+//		free(sdarray.sarray[i]);
+//
+//	return 0;
+//}
+
+//#pragma warning(disable:4996)
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//struct SDArray
+//{
+//	char* sarray[100];
+//	int scount;
+//};
+//void AddStringArray(SDArray* sda, char* data)
+//{
+//	sda->sarray[sda->scount++] = data;
+//}
+//void PrintStringCountArray(SDArray* sda)
+//{
+//	printf("count : %d\n", sda->scount);
+//}
+//void PrintStringArray(SDArray* sda)
+//{
+//	for (int i = 0; i < sda->scount, ++i)
+//		printf("[%d] : %s\n", i, sda->sarray[i]);
+//}
+//void FreeStringArray(SDArray* sda)
+//{
+//	for (int i = 0; i < sdarray.scount; ++i)
+//		free(sdarray.sarray[i]);
+//}
+//
+//int main()
+//{
+//	SDArray sdarray = { 0 };
+//
+//	char buf[100] = "";
+//
+//	while (1)
+//	{
+//		printf("input : ");
+//		gets_s(buf, 100);
+//		if (strcmp(buf, "exit") == 0)
+//			break;
+//		else
+//		{
+//			char* s = (char*)malloc(strlen(buf) + 1);
+//			strcpy(s, buf);
+//			AddStringArray(&sdarray, s);
+//			sdarray.sarray[sdarray.scount++] = s;
+//			printf("[0] : %d\n", buf[0]);
+//			printf("str : %s\n", buf);
+//		}
+//	}
+//
+//	printf("\n");
+//	PrintStringCountArray(&sdarray);
+//	PrintStringArray(&sdarray);
+//
+//
+//	FreeStringArray(&sdarray);
+//
+//	return 0;
+//}
+
+#pragma warning(disable:4996)
+#include <stdio.h>
 #include <string.h>
-struct Person
+#include <stdlib.h>
+struct SDArray
 {
-	char name[20];
-	char phone[20];
+	char* sarray[100];
+	int scount;
 };
-//struct Person
-//{
-//	char* name;
-//	char* phone;
+void AddStringArray(SDArray* sda, char* data)
+{
+	sda->sarray[sda->scount++] = data;
+}
+void PrintStringCountArray(SDArray* sda)
+{
+	printf("count : %d\n", sda->scount);
+}
+void PrintStringArray(SDArray* sda)
+{
+	for (int i = 0; i < sda->scount; ++i)
+		printf("[%d] : %s\n", i, sda->sarray[i]);
+}
+void FreeStringArray(SDArray* sda)
+{
+	for (int i = 0; i < sda->scount; ++i)
+		free(sda->sarray[i]);
+}
 //
-//};
+void InputString(char* dest)
+{
+	printf("input : ");
+	gets_s(dest, 100);
+}
+char* AllocString(char* src)
+{
+	char* t = (char*)malloc(strlen(src) + 1);
+	strcpy(t, src);
+	return t;
+}
+void PrintStringInfo(char* src)
+{
+	printf("[0] : %d\n", src[0]);
+	printf("str : %s\n", src);
+}
+//
+
+int IsExit(char* src)
+{
+	return strcmp(src, "exit") == 0;
+}
+
 int main()
 {
-	char name[20];
-	char phone[20];
+	SDArray sdarray = { 0 };
 
-	printf("이름 입력:");
-	fgets(name,20,stdin);
-	printf("전화 입력:");
-	fgets(phone,20,stdin);
-	Person per1;
+	char buf[100] = "";
 
+	while (1)
+	{
+		char buf[100] = "";
 
-	strcpy(per1.name, "hong");
-	strcpy(per1.phone, "010-1234-1111");
+		InputString(buf);
+		if (IsExit(buf))
+			break;
+		else
+		{
+			char* s = AllocString(buf);
+			AddStringArray(&sdarray, s);
+			PrintStringInfo(s);
+		}
+	}
 
+	PrintStringCountArray(&sdarray);
+	PrintStringArray(&sdarray);
 
-
-	printf("name : %s, phone : %s\n", per1.name, per1.phone);
+	FreeStringArray(&sdarray);
+	return 0;
 }
