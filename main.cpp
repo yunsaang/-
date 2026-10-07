@@ -1,482 +1,567 @@
 //#include <stdio.h>
+//struct Person
+//{
+//	char name[20];
+//	char phone[20];
+//};
+//void PrintPerson(Person* p)
+//{
+//	printf("name:%s, phone:%s\n", p->name, p->phone);
+//}
 //int main()
 //{
-//	char buf[100] = "";
-//	printf("%d", buf[0]);
+//	Person p1 = { "hong", "010-1234-1234" };
+//	PrintPerson(&p1);
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#include <stdio.h> //데이터 담는 방법 다름 메모리 그림
+//#include <stdlib.h>
+//struct Person
+//{
+//	char* name; // char name[20]; 
+//	char* phone; // phone[20];
+//};
+//void PrintPerson(Person* p)
+//{
+//	printf("name:%s, phone:%s\n", p->name, p->phone);
+//}
+//void InputPerson(Person* p)
+//{
+//	printf("input name:");
+//	p->name = (char*)malloc(20);
+//	gets_s(p->name,20);
+//	printf("input name:");
+//	p->phone = (char*)malloc(20);
+//	gets_s(p->phone,20);
+//}
 //int main()
 //{
-//	char buf[100] = "";
+//	Person p1; // = { "hong", "010-1234-1234" };
 //
-//	// buf = "ABC"; 틀림
+//	InputPerson(&p1);
+//	PrintPerson(&p1);
 //
-//	// 첫번째 방법
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//}
+// 
+// 
+//#pragma warning(disable: 4996)
+//#include <stdio.h> //데이터 담는 방법 다름 메모리 그림
+//#include <stdlib.h>
+//#include <string.h>
 //
-//	strcpy(buf, "ABC");
+//struct Person
+//{
+//	char* name; // char name[20]; 
+//	char* phone; // phone[20];
+//};
+//void PrintPerson(Person* p)
+//{
+//	printf("name:%s, phone:%s\n", p->name, p->phone);
+//}
+//void InputPerson(Person* p)
+//{
+//	char name[20];
+//	char phone[20];
+//	printf("input name: ");
+//	gets_s(name, 20);
+//	p->name = (char*)malloc(strlen(name) + sizeof(char));
+//	strcpy(p->name, name);
 //
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
+//	printf("input phone:");
+//	gets_s(phone, 20);
+//	p->phone = (char*)malloc(strlen(phone) + sizeof(char));
+//	strcpy(p->phone, phone);
+//
+//
+//
+//}
+//int main()
+//{
+//	Person p1; // = { "hong", "010-1234-1234" };
+//
+//	InputPerson(&p1);
+//	PrintPerson(&p1);
+//
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
+//#pragma warning(disable: 4996)
+//#include <stdio.h> //데이터 담는 방법 다름 메모리 그림
+//#include <stdlib.h>
 //#include <string.h>
+//
+//struct Person
+//{
+//	char* name; // char name[20]; 
+//	char* phone; // phone[20];
+//};
+//void PrintPerson(Person* p)
+//{
+//	printf("name:%s, phone:%s\n", p->name, p->phone);
+//}
+//void InputPerson(Person* p)
+//{
+//	char name[20];
+//	char phone[20];
+//	printf("input name: ");
+//	gets_s(name, 20);
+//	p->name = (char*)malloc(strlen(name) + sizeof(char));
+//	strcpy(p->name, name);
+//
+//	printf("input phone:");
+//	gets_s(phone, 20);
+//	p->phone = (char*)malloc(strlen(phone) + sizeof(char));
+//	strcpy(p->phone, phone);
+//
+//}
+//void FreePerson(Person* p)
+//{
+//	free(p->name);
+//	free(p->phone);
+//
+//}
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
+//	Person p1; // = { "hong", "010-1234-1234" };
 //
-//	// buf = "ABC";
+//	InputPerson(&p1);
+//	PrintPerson(&p1);
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//	FreePerson(&p1);
 //
-//	strcpy(buf, "ABC");
-//
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996)
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	printf("%d\n", n1.data);
+//	printf("%d\n", n2.data);
+//	printf("%d\n", n3.data);
+//	printf("%d\n", n4.data);
+//	printf("%d\n", n5.data);
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
-//
-//	strcpy(buf, "ABC");
-//
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996) 메모리 그림
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	printf("%d\n", n1.data);
+//	printf("%d\n", n2.data);
+//	printf("%d\n", n3.data);
+//	printf("%d\n", n4.data);
+//	printf("%d\n", n5.data);
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
-//
-//	strcpy(dest, src);
-//
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //}
 
-//#pragma warning(disable:4996) 메모리 그림 (stack ~ global data 
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996)
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	n1.link = &n2;
+//	n2.link = &n3;
+//	n3.link = &n4;
+//	n4.link = &n5;
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//	printf("%d\n", n1.data);
+//	printf("%d\n", n2.data);
+//	printf("%d\n", n3.data);
+//	printf("%d\n", n4.data);
+//	printf("%d\n", n5.data);
 //
-//	strcpy(dest, src);
-//
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996)
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
+//	Node* head;
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	head = &n1;
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//	n1.link = &n2;
+//	n2.link = &n3;
+//	n3.link = &n4;
+//	n4.link = &n5;
 //
-//	//strcpy(buf, "ABC");
-//	gets_s(buf,100);
+//	printf("%d\n", head->data);
+//	printf("%d\n", head->link->data);
+//	printf("%d\n", head->link->link->data);
+//	printf("%d\n", head->link->link->link->data);
+//	printf("%d\n", head->link->link->link->link->data;
 //
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996) //메모리그림
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
+//	Node* head;
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	head = &n1;
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//	n1.link = &n2;
+//	n2.link = &n3;
+//	n3.link = &n4;
+//	n4.link = &n5;
 //
-//	//strcpy(buf, "ABC");
+//	Node* p = head;
+//	printf("%d\n", p->data);
+//	p = p->link;
+//	printf("%d\n", p->data);
+//	p = p->link;
+//	printf("%d\n", p->data);
+//	p = p->link;
+//	printf("%d\n", p->data);
+//	p = p->link;
+//	printf("%d\n", p->data);
 //
-//	printf("input : ");
-//	gets_s(buf, 100);
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
 //
-//	printf("input : ");
-//	gets_s(buf, 100);
-//	printf("[0] : %d\n", buf[0]);
-//	printf("str : %s\n", buf);
+//	printf("%d\n", p->data);
+//	printf("%d\n", p->data);
+//	printf("%d\n", p->data);
+//	printf("%d\n", p->data);
+//	printf("%d\n", p->data);
+//
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996) //메모리그림
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* link;
+//};
 //int main()
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
+//	Node* head;
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	// buf = "ABC";
+//	head = &n1;
 //
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
+//	n1.link = &n2;
+//	n2.link = &n3;
+//	n3.link = &n4;
+//	n4.link = &n5;
 //
-//	//strcpy(buf, "ABC");
-//
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		printf("[0] : %d\n", buf[0]);
-//		printf("str : %s\n", buf);
-//	}
+//	for(Node* p = head; p!= NULL; p = p->link)
+//		printf("%d\n", p->data);
 //	
-//	return 0;
+//
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996) //메모리그림
+//#include <stdio.h> 
 //#include <stdlib.h>
-//int main()
+//
+//struct Node
 //{
-//	char buf[100] = ""; //{'\0'}
-//	char* dest = buf;
-//	const char* src = "ABC";
-//
-//	// buf = "ABC";
-//
-//	/*buf[0] = 'A';
-//	buf[1] = 'B';
-//	buf[2] = 'C';
-//	buf[3] = '\0';*/
-//
-//	//strcpy(buf, "ABC");
-//
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		else
-//		{
-//			char* s = (char*)malloc(strlen(buf)+1 );
-//			strcpy(s, buf);
-//			printf("[0] : %d\n", buf[0]);
-//			printf("str : %s\n", buf);
-//		}
-//	}
-//
-//	return 0;
-//}
-
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
-//int main()
-//{
-//	char* sarray[10000] = { NULL };
-//	int scount = 0;
-//
-//	char buf[100] = ""; 
-//
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		else
-//		{
-//			char* s = (char*)malloc(strlen(buf) + 1);
-//			strcpy(s, buf);
-//			sarray[scount++] = s;
-//			printf("[0] : %d\n", buf[0]);
-//			printf("str : %s\n", buf);
-//		}
-//	}
-//
-//	printf("count : %d\n", scount);
-//	return 0;
-//}
-
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
-//int main()
-//{
-//	char* sarray[10000] = { NULL };
-//	int scount = 0;
-//
-//	char buf[100] = "";
-//
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		else
-//		{
-//			char* s = (char*)malloc(strlen(buf) + 1);
-//			strcpy(s, buf);
-//			sarray[scount++] = s;
-//			printf("[0] : %d\n", buf[0]);
-//			printf("str : %s\n", buf);
-//		}
-//	}
-//
-//	printf("\n");
-//	printf("count : %d\n", scount);
-//	for (int i = 0; i < scount; ++i)
-//		printf("[%d] : %s\n", i, sarray[i]);
-//
-//	for (int i = 0; i < scount; ++i)
-//		free(sarray[i]);
-//
-//	return 0;
-//}
-
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
-//#include <stdlib.h>
-//struct SDArray
-//{
-//	char* sarray[100];
-//	int scount;
+//	int data;
+//	Node* link;
 //};
 //int main()
 //{
-//	SDArray sdarray = { 0 };
+//	Node* head;
+//	Node n1 = { 10,NULL };
+//	Node n2 = { 20,NULL };
+//	Node n3 = { 30,NULL };
+//	Node n4 = { 40,NULL };
+//	Node n5 = { 50,NULL };
 //
-//	char buf[100] = "";
+//	head = &n1;
 //
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		else
-//		{
-//			char* s = (char*)malloc(strlen(buf) + 1);
-//			strcpy(s, buf);
-//			sdarray.sarray[sdarray.scount++] = s;
-//			printf("[0] : %d\n", buf[0]);
-//			printf("str : %s\n", buf);
-//		}
-//	}
+//	n1.link = &n2;
+//	n2.link = &n3;
+//	n3.link = &n4;
+//	n4.link = &n5;
 //
-//	printf("\n");
-//	printf("count : %d\n", sdarray.scount);
-//	for (int i = 0; i < sdarray.scount; ++i)
-//		printf("[%d] : %s\n", i, sdarray.sarray[i]);
+//	for (Node* p = head; p != NULL; p = p->link)
+//		printf("%d\n", p->data);
 //
-//	for (int i = 0; i < sdarray.scount; ++i)
-//		free(sdarray.sarray[i]);
 //
-//	return 0;
 //}
 
-//#pragma warning(disable:4996)
-//#include <stdio.h>
-//#include <string.h>
+//#pragma warning(disable: 4996) //메모리그림 이중연결리스트
+//#include <stdio.h> 
 //#include <stdlib.h>
-//struct SDArray
-//{
-//	char* sarray[100];
-//	int scount;
-//};
-//void AddStringArray(SDArray* sda, char* data)
-//{
-//	sda->sarray[sda->scount++] = data;
-//}
-//void PrintStringCountArray(SDArray* sda)
-//{
-//	printf("count : %d\n", sda->scount);
-//}
-//void PrintStringArray(SDArray* sda)
-//{
-//	for (int i = 0; i < sda->scount, ++i)
-//		printf("[%d] : %s\n", i, sda->sarray[i]);
-//}
-//void FreeStringArray(SDArray* sda)
-//{
-//	for (int i = 0; i < sdarray.scount; ++i)
-//		free(sdarray.sarray[i]);
-//}
 //
+//struct Node
+//{
+//	int data;
+//	Node* prev;
+//	Node* next;
+//};
 //int main()
 //{
-//	SDArray sdarray = { 0 };
+//	Node* head;
+//	Node n1 = { 10,NULL,NULL };
+//	Node n2 = { 20,NULL,NULL };
+//	Node n3 = { 30,NULL,NULL };
+//	Node n4 = { 40,NULL,NULL };
+//	Node n5 = { 50,NULL,NULL };
 //
-//	char buf[100] = "";
+//	head = &n1;
 //
-//	while (1)
-//	{
-//		printf("input : ");
-//		gets_s(buf, 100);
-//		if (strcmp(buf, "exit") == 0)
-//			break;
-//		else
-//		{
-//			char* s = (char*)malloc(strlen(buf) + 1);
-//			strcpy(s, buf);
-//			AddStringArray(&sdarray, s);
-//			sdarray.sarray[sdarray.scount++] = s;
-//			printf("[0] : %d\n", buf[0]);
-//			printf("str : %s\n", buf);
-//		}
-//	}
+//	n1.next = &n2;
+//	n2.next = &n3;
+//	n3.next = &n4;
+//	n4.next = &n5;
 //
-//	printf("\n");
-//	PrintStringCountArray(&sdarray);
-//	PrintStringArray(&sdarray);
+//	for (Node* p = head; p != NULL; p = p->next)
+//		printf("%d\n", p->data);
 //
 //
-//	FreeStringArray(&sdarray);
-//
-//	return 0;
 //}
 
-#pragma warning(disable:4996)
-#include <stdio.h>
-#include <string.h>
+//#pragma warning(disable: 4996) //메모리그림 이중연결리스트, 더미노드
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* prev;
+//	Node* next;
+//};
+//int main()
+//{
+//	Node* head;
+//	Node* tail;
+//	Node n1 = { 10,NULL,NULL };
+//	Node n2 = { 20,NULL,NULL };
+//	Node n3 = { 30,NULL,NULL };
+//	Node n4 = { 40,NULL,NULL };
+//	Node n5 = { 50,NULL,NULL };
+//
+//	head = &n1;
+//	tail = &n5;
+//
+//	n1.next = &n2;
+//	n2.prev = &n1;
+//
+//	n2.next = &n3;
+//	n3.prev = &n2;
+//
+//	n3.next = &n4;
+//	n4.prev = &n3;
+//
+//	n4.next = &n5;
+//	n5.prev = &n4;
+//
+//
+//
+//	for (Node* p = head; p != NULL; p = p->next)
+//		printf("%d\n", p->data);
+//
+//
+//}
+
+//#pragma warning(disable: 4996) //메모리그림 더미노드
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* prev;
+//	Node* next;
+//};
+//int main()
+//{
+//	Node dummy1 = { NULL };
+//	Node dummy2 = { NULL };
+//	Node* head = &dummy1;
+//	Node* tail = &dummy2;
+//	head->next = tail;
+//	tail->prev = head;
+//
+//
+//	Node n1 = { 10,NULL,NULL };
+//	Node n2 = { 20,NULL,NULL };
+//	Node n3 = { 30,NULL,NULL };
+//	Node n4 = { 40,NULL,NULL };
+//	Node n5 = { 50,NULL,NULL };
+//
+//	head->next = &n1;
+//	n1.prev = head;
+//	n1.next = tail;
+//	tail->prev = &n1;
+//
+//
+//
+//	for (Node* p = head; p != NULL; p = p->next)
+//		printf("%d\n", p->data);
+//
+//
+//}
+
+//#pragma warning(disable: 4996) //메모리그림 더미노드
+//#include <stdio.h> 
+//#include <stdlib.h>
+//
+//struct Node
+//{
+//	int data;
+//	Node* prev;
+//	Node* next;
+//};
+//int main()
+//{
+//	Node dummy1 = { NULL };
+//	Node dummy2 = { NULL };
+//	Node* head = &dummy1;
+//	Node* tail = &dummy2;
+//	head->next = tail;
+//	tail->prev = head;
+//
+//
+//	Node n1 = { 10,NULL,NULL };
+//	Node n2 = { 20,NULL,NULL };
+//	Node n3 = { 30,NULL,NULL };
+//	Node n4 = { 40,NULL,NULL };
+//	Node n5 = { 50,NULL,NULL };
+//
+//	Node* ptail;
+//	ptail = tail->prev;
+//	ptail->next = &n1;
+//	n1.prev = head;
+//	n1.next = tail;
+//	tail->prev = &n1;
+//
+//	ptail = tail->prev;
+//	ptail->next = &n2;
+//	n2.prev = head;
+//	n2.next = tail;
+//	tail->prev = &n2;
+//
+//	ptail = tail->prev;
+//	ptail->next = &n3;
+//	n3.prev = head;
+//	n3.next = tail;
+//	tail->prev = &n3;
+//
+//
+//
+//	for (Node* p = head; p != NULL; p = p->next)
+//		printf("%d\n", p->data);
+//
+//
+//}
+
+#pragma warning(disable: 4996) //메모리그림 더미노드
+#include <stdio.h> 
 #include <stdlib.h>
-struct SDArray
+
+struct Node
 {
-	char* sarray[100];
-	int scount;
+	int data;
+	Node* prev;
+	Node* next;
 };
-void AddStringArray(SDArray* sda, char* data)
+void AddTail(Node* head, Node* tail, Node* n)
 {
-	sda->sarray[sda->scount++] = data;
-}
-void PrintStringCountArray(SDArray* sda)
-{
-	printf("count : %d\n", sda->scount);
-}
-void PrintStringArray(SDArray* sda)
-{
-	for (int i = 0; i < sda->scount; ++i)
-		printf("[%d] : %s\n", i, sda->sarray[i]);
-}
-void FreeStringArray(SDArray* sda)
-{
-	for (int i = 0; i < sda->scount; ++i)
-		free(sda->sarray[i]);
-}
-//
-void InputString(char* dest)
-{
-	printf("input : ");
-	gets_s(dest, 100);
-}
-char* AllocString(char* src)
-{
-	char* t = (char*)malloc(strlen(src) + 1);
-	strcpy(t, src);
-	return t;
-}
-void PrintStringInfo(char* src)
-{
-	printf("[0] : %d\n", src[0]);
-	printf("str : %s\n", src);
-}
-//
+	Node* ptail = tail->prev;
 
-int IsExit(char* src)
-{
-	return strcmp(src, "exit") == 0;
+	ptail = tail->prev;
+	ptail->next = n;
+	n->prev = ptail;
+	n->next = tail;
+	tail->prev = n;
 }
-
 int main()
 {
-	SDArray sdarray = { 0 };
+	Node dummy1 = { NULL };
+	Node dummy2 = { NULL };
+	Node* head = &dummy1;
+	Node* tail = &dummy2;
+	head->next = tail;
+	tail->prev = head;
 
-	char buf[100] = "";
 
-	while (1)
-	{
-		char buf[100] = "";
+	Node n1 = { 10,NULL,NULL };
+	Node n2 = { 20,NULL,NULL };
+	Node n3 = { 30,NULL,NULL };
+	Node n4 = { 40,NULL,NULL };
+	Node n5 = { 50,NULL,NULL };
 
-		InputString(buf);
-		if (IsExit(buf))
-			break;
-		else
-		{
-			char* s = AllocString(buf);
-			AddStringArray(&sdarray, s);
-			PrintStringInfo(s);
-		}
-	}
+	AddTail(head, tail, &n1);
+	AddTail(head, tail, &n2);
+	AddTail(head, tail, &n3);
+	AddTail(head, tail, &n4);
+	AddTail(head, tail, &n5);
 
-	PrintStringCountArray(&sdarray);
-	PrintStringArray(&sdarray);
 
-	FreeStringArray(&sdarray);
-	return 0;
+	for (Node* p = head; p != NULL; p = p->next)
+		printf("%d\n", p->data);
+
+
 }
