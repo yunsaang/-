@@ -1,704 +1,689 @@
-//#include <stdio.h> Î©îÎ™®Î¶¨Í∑∏Î¶ºÎ≥¥Í≥† ÏΩîÎìú ÏûëÏÑ± ÌïÑÏöî ÏãúÌóò
-//struct Node
+//#include <stdio.h>
+//#include <string.h>
+//struct Person
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
-//
+//	char name[20];
 //};
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//	Node n1 = { 10,NULL,NULL };
-//	Node n2 = { 20,NULL,NULL };
+//    Person p1;
 //
-//	head = &n1;
-//	tail = &n2;
-//
-//	n1.next = &n2;
-//	//head->next = tail;
-//
-//	n2.prev = &n1;
-//
-//	printf("%d\n", head->data);
-//
-//	printf("%d\n", tail->data);
-//	printf("%d\n", head->next->data);
-//	
+//    // gets_s(p1, name);
+//    strcpy_s(p1.name, "hong gil dong");
+//    printf("name : %s", p1.name);
 //}
 
-//#include <stdio.h> // Î©îÎ™®Î¶¨Í∑∏Î¶ºÎ≥¥Í≥† ÏΩîÎìú ÏûëÏÑ± ÌïÑÏöî ÏãúÌóò *
-//struct Node
+//#include <stdio.h>
+//#include <string.h>
+//struct Person
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    char name[20];
+//    char phone[20];
 //
 //};
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//	Node n1 = { 10,NULL,NULL };
-//	Node n2 = { 20,NULL,NULL };
+//    Person p1;
 //
+//    // gets_s(p1, name);
+//    strcpy_s(p1.name, "hong gil dong");
+//    strcpy_s(p1.phone, "010-1234-5678");
 //
-//	head = &n1;
-//	tail = &n2;
-//
-//	n1.next = &n2;
-//	n2.prev = &n1;
-//
-//	Node n3 = { 80,NULL,NULL };
-//	n1.next = &n3;
-//	n3.prev = &n1;
-//	n3.next = &n2;
-//	n2.prev = &n3;
-//
-//	printf("%d\n", head->data);
-//	printf("%d\n", head->next->data);
-//	printf("%d\n", head->next->next->data);
-//
-//	printf("%d\n", tail->data);
-//	printf("%d\n", tail->prev->data);
-//	printf("%d\n", tail->prev->prev->data);
-//
-//	Node* p = head;
-//	printf("%d\n", p->data); //10
-//	p = p->next; // Ï§ëÏöî
-//	printf("%d\n", p->data); //80
-//	p = p->next;
-//	printf("%d\n", p->data); //20
-//
-//}
-
-//#include <stdio.h> // Î©îÎ™®Î¶¨Í∑∏Î¶ºÎ≥¥Í≥† ÏΩîÎìú ÏûëÏÑ± ÌïÑÏöî ÏãúÌóò * Ïä§ÌÖç, Ìûô, ÎÖ∏Îìú Ïñ¥ÎîîÏóê
-//struct Node
-//{
-//	int data;
-//	Node* prev;
-//	Node* next;
-//
-//};
-//int main()
-//{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//
-//
-//	Node* p = head;
-//	printf("%d\n", p->data); //10
-//	p = p->next; // Ï§ëÏöî
-//	printf("%d\n", p->data); //80
-//	p = p->next;
-//	printf("%d\n", p->data); //20
+//    printf("name : %s\n", p1.name);
+//    printf("phone : %s\n", p1.phone);
 //
 //}
 
 //#include <stdio.h>
-//#include <stdlib.h>
-//struct Node
+//#include <string.h>
+//struct Person
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    char name[20];
+//    char phone[20];
 //
 //};
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    Person p1;
 //
-//	head = (Node*)malloc(sizeof(Node));
-//	head->data = 10;
-//	head->prev = NULL;
-//	head->next = NULL;
+//    gets_s(p1.name);
+//    gets_s(p1.phone);
 //
-//	tail = (Node*)malloc(sizeof(Node));
-//	tail->data = 20;
-//	tail->prev = NULL;
-//	tail->next = NULL;
+//   //strcpy_s(p1.name, "hong gil dong");
+//   // strcpy_s(p1.phone, "010-1234-5678");
+//
+//    printf("name : %s\n", p1.name);
+//    printf("phone : %s\n", p1.phone);
+//
 //}
 
-//#include <stdio.h>
-//#include <stdlib.h>
-//struct Node
+//#include <stdio.h> // ªı∑ŒøÓ ≥ªøÎ  ¡§ºÆ
+//#include <string.h>
+//struct Person
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    char* name;
+//    char* phone;
 //
 //};
-//Node* AllocNode(int data)
-//{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
-//}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    char buf1[100];
+//    char buf2[200];
+//    Person p1 = { buf1,buf2 };
 //
-//	head = AllocNode(10);
-//	tail = AllocNode(20);
+//    //gets_s(p1.name, 100);
+//    //gets_s(p1.phone, 100);
+//    strcpy_s(p1.name, 14, "hong gil dong");
+//    strcpy_s(p1.phone, 14, "010-1234-5678");
 //
-//	printf("%d\n", head->data);
-//	printf("%d\n", tail->data);
-//
+//    printf("name : %s\n", p1.name);
+//    printf("phone : %s\n", p1.phone);
 //
 //}
 
-//#include <stdio.h>
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
-//struct Node
+//struct Person
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    char* name;
+//    char* phone;
 //
 //};
-//Node* AllocNode(int data)
-//{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
-//}
-//void FreeNode(Node* p)
-//{
-//	free(p);
-//}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    Person p1 = { NULL,NULL };
 //
-//	head = AllocNode(10);
-//	tail = AllocNode(20);
+//    p1.name = (char*)malloc(sizeof(char) * 100);
+//    p1.phone = (char*)malloc(sizeof(char) * 100);
 //
-//	printf("%d\n", head->data);
-//	printf("%d\n", tail->data);
+//    //gets_s(p1.name, 100);
+//    //gets_s(p1.phone, 100);
+//    strcpy_s(p1.name, 14, "hong gil dong");
+//    strcpy_s(p1.phone, 14, "010-1234-5678");
 //
-//	FreeNode(head);
-//	FreeNode(tail);
-//
+//    printf("name : %s\n", p1.name);
+//    printf("phone : %s\n", p1.phone);
 //
 //}
 
-//#include <stdio.h> Î©îÎ™®Î¶¨ Í∑∏Î¶º
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* link;
+//};
+//int main()
+//{
+//    Node n1 = { 10,NULL };
+//    Node n2 = { 20,NULL };
+//    Node n3 = { 30,NULL };
+//    Node* p;
+//
+//    printf("name : %s\n", p1.name);
+//    printf("phone : %s\n", p1.phone);
+//
+//}
+
+//#include <stdio.h> 
+//#include <string.h>
+//#include <stdlib.h>
+//struct Node
+//{
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
-//Node* AllocNode(int data)
-//{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
-//}
-//void FreeNode(Node* p)
-//{
-//	free(p);
-//}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    Node n1 = { 10,NULL,NULL };
 //
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(10);
-//
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
-//
-//	for (Node* p = head; p != NULL; p = p->next)
-//		printf("%5d", p->data);
-//	printf("\n");
-//
-//	FreeNode(head);
-//	FreeNode(tail);
-//
+//    printf("%d\n", n1.data);
 //
 //}
-
-//#include <stdio.h>
+// 
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
-//Node* AllocNode(int data)
-//{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
-//}
-//void FreeNode(Node* p)
-//{
-//	free(p);
-//}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    //¡§ºˆ ¿˙¿Â∞¸∏Æ ø¨∞· ∏ÆΩ∫∆Æ
 //
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(10);
-//
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
-//
-//	for (Node* p = head->next; p != tail; p = p->next)
-//		printf("%5d", p->data);
-//	printf("\n");
-//
-//	FreeNode(head);
-//	FreeNode(tail);
-//
+//    Initlist();
+//    AddFirstlist();
+//    AddLastlist();
+//    Removelist();
+//    GetHead();
+//    Next();
+//    HasNext();
+//    GetData();
+//    Printlist();
+//    Jninitlist();
+//    Uninitlist();
 //
 //}
 
-//#include <stdio.h>
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* prev;
+//    Node* next;
+//
+//};
+//int main()
+//{
+//    Node* head = NULL;
+//    Node* tail = NULL;
+//
+//
+//    Initlist(head, tail);
+//    Printlist(head, tail);
+//    Uninitlist(head, tail);
+//
+//}
+
+//#include <stdio.h> //∏ﬁ∏∏Æ ±◊∏≤
+//#include <string.h>
+//#include <stdlib.h>
+//struct Node
+//{
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
 //Node* AllocNode(int data)
 //{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
+//    Node* n = (Node*)malloc(sizeof(Node));
+//    n->data = data;
+//    n->next = n->prev = NULL;
+//    return n;
 //}
-//void FreeNode(Node* p)
+//struct LinkedList
 //{
-//	free(p);
+//    Node* head;
+//    Node* tail;
+//};
+//void InitList(LinkedList* plt)
+//{
+//    plt->head = AllocNode(0);
+//    plt->tail = AllocNode(0);
+//    plt->head->next = plt->tail;
+//    plt->tail->prev = plt->head;
+//
+//}
+//void UninitList(LinkedList* plt)
+//{
+//    Node* np;
+//    for (Node* p = plt->head; p != NULL; p = np)
+//    {
+//        np = p->next;
+//        free(p);
+//    }
+//}
+//void PrintList(LinkedList* plt)
+//{
+//    for (Node* p = plt->head; p != NULL; p = p->next)
+//        printf("%d", p->data);
+//    printf("\n");
 //}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
+//    LinkedList lt;
 //
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(10);
-//
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
-//
-//	pt = tail->prev;
-//	n = AllocNode(20);
-//
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
-//
-//	pt = tail->prev;
-//	n = AllocNode(30);
-//
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
-//
-//	for (Node* p = head->next; p != tail; p = p->next)
-//		printf("%5d", p->data);
-//	printf("\n");
-//
-//	FreeNode(head);
-//	FreeNode(tail);
-//
+//    InitList(&lt);
+//    PrintList(&lt);
+//    UninitList(&lt);
 //
 //}
 
-//#include <stdio.h>
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
 //Node* AllocNode(int data)
 //{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
-//
-//	return n;
+//    Node* n = (Node*)malloc(sizeof(Node));
+//    n->data = data;
+//    n->next = n->prev = NULL;
+//    return n;
 //}
-//void FreeNode(Node* p)
+//struct LinkedList
 //{
-//	free(p);
-//}
-//void AddNode(Node* head, Node* tail, int data)
+//    Node* head;
+//    Node* tail;
+//};
+//void InitList(LinkedList* plt)
 //{
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(data);
+//    plt->head = AllocNode(0);
+//    plt->tail = AllocNode(0);
+//    plt->head->next = plt->tail;
+//    plt->tail->prev = plt->head;
 //
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
 //}
-//void FreeAllNode(Node* head, Node* tail)
+//void UninitList(LinkedList* plt)
 //{
+//    Node* np;
+//    for (Node* p = plt->head; p != NULL; p = np)
+//    {
+//        np = p->next;
+//        free(p);
+//    }
+//}
+//void PrintList(LinkedList* plt)
+//{
+//    for (Node* p = plt->head; p != NULL; p = p->next)
+//        printf("%d", p->data);
+//    printf("\n");
+//}
+//void AddTailList(LinkedList* plt, int data)
+//{
+//    Node* ptail = plt->tail->prev;
+//    Node* n = AllocNode(data);
+//    ptail->next = n;
+//    n->prev = ptail;
+//    n->next = plt->tail;
+//    plt->tail->prev = n;
 //
-//	Node* np;
-//	for (Node* p = head; p != NULL; p = np)
-//	{
-//		np = p->next;
-//		FreeNode(p);
-//	}
+//}
+//void AddFirstList(LinkedList* plt, int data)
+//{
+//    Node* nhead = plt->head->next;
+//    Node* n = AllocNode(data);
+//    plt->head->next = n;
+//    n->prev = plt->head;
+//    n->next = nhead;
+//    nhead->prev = n;
 //}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	AddNode(head, tail, 10);
-//	AddNode(head, tail, 20);
-//	AddNode(head, tail, 30);
-//	AddNode(head, tail, 40);
-//	AddNode(head, tail, 50);
+//    LinkedList lt;
 //
 //
+//    InitList(&lt);
+//    AddTailList(&lt, 10);
+//    AddTailList(&lt, 20);
+//    AddTailList(&lt, 30);
+//    AddTailList(&lt, 40);
+//    AddTailList(&lt, 50);
+//    AddFirstList(&lt, 100);
+//    AddFirstList(&lt, 200);
 //
 //
-//	for (Node* p = head->next; p != tail; p = p->next)
-//		printf("%5d", p->data);
-//	printf("\n");
+//    PrintList(&lt);
+//    UninitList(&lt);
 //
-//	FreeAllNode(head, tail);
 //}
 
-//#include <stdio.h>
+//#include <stdio.h> 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
 //Node* AllocNode(int data)
 //{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
+//    Node* n = (Node*)malloc(sizeof(Node));
+//    n->data = data;
+//    n->next = n->prev = NULL;
+//    return n;
+//}
+//struct LinkedList
+//{
+//    Node* head;
+//    Node* tail;
+//};
+//void InitList(LinkedList* plt)
+//{
+//    plt->head = AllocNode(0);
+//    plt->tail = AllocNode(0);
+//    plt->head->next = plt->tail;
+//    plt->tail->prev = plt->head;
 //
-//	return n;
 //}
-//void FreeNode(Node* p)
+//void UninitList(LinkedList* plt)
 //{
-//	free(p);
+//    Node* np;
+//    for (Node* p = plt->head; p != NULL; p = np)
+//    {
+//        np = p->next;
+//        free(p);
+//    }
 //}
-//void AddNode(Node* head, Node* tail, int data)
+//void PrintList(LinkedList* plt)
 //{
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(data);
+//    for (Node* p = plt->head; p != NULL; p = p->next)
+//        printf("%d", p->data);
+//    printf("\n");
+//}
+//void AddTailList(LinkedList* plt, int data)
+//{
+//    Node* ptail = plt->tail->prev;
+//    Node* n = AllocNode(data);
+//    ptail->next = n;
+//    n->prev = ptail;
+//    n->next = plt->tail;
+//    plt->tail->prev = n;
 //
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
 //}
-//void FreeAllNode(Node* head, Node* tail)
+//void AddFirstList(LinkedList* plt, int data)
 //{
-//
-//	Node* np;
-//	for (Node* p = head; p != NULL; p = np)
-//	{
-//		np = p->next;
-//		FreeNode(p);
-//	}
+//    Node* nhead = plt->head->next;
+//    Node* n = AllocNode(data);
+//    plt->head->next = n;
+//    n->prev = plt->head;
+//    n->next = nhead;
+//    nhead->prev = n;
 //}
-//Node* GetHead(Node* head)
+//Node* GetHead(LinkedList* plt)
 //{
-//	return head->next;
+//    return plt->head->next;
 //}
-//int HasNext(Node* tail, Node* p)
+//int HasNext(LinkedList* plt, Node* p)
 //{
-//	return tail != p;
+//    return p->next != plt->tail;
 //}
-//int GetData(Node* p)
+//Node* Next(LinkedList* plt, Node* p)
 //{
-//	return p->data
+//    return p->next;
 //}
-//Node* Next(Node* p)
+//int GetData(LinkedList* plt, Node* p)
 //{
-//	return p->next;
+//    return p->data;
 //}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	AddNode(head, tail, 10);
-//	AddNode(head, tail, 20);
-//	AddNode(head, tail, 30);
-//	AddNode(head, tail, 40);
-//	AddNode(head, tail, 50);
+//    LinkedList lt;
 //
-//	for (Node* p = GetHead(head); HasNext(tail, p); p = Next(p) )
-//		printf("%5d", GetData(p));
-//	printf("\n");
+//    InitList(&lt);
 //
-//	FreeAllNode(head, tail);
+//    AddTailList(&lt, 10);
+//    AddTailList(&lt, 20);
+//    AddTailList(&lt, 30);
+//    AddTailList(&lt, 40);
+//    AddTailList(&lt, 50);
+//    AddFirstList(&lt, 100);
+//    AddFirstList(&lt, 200);
+//
+//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
+//        printf("%d", GetData(&lt, p));
+//    printf("\n");
+//
+//    PrintList(&lt);
+//    UninitList(&lt);
+//
 //}
 
-//#include <stdio.h>
+//#include <stdio.h> //∏ﬁ∏∏Æ±◊∏≤ 
+//#include <string.h>
 //#include <stdlib.h>
 //struct Node
 //{
-//	int data;
-//	Node* prev;
-//	Node* next;
+//    int data;
+//    Node* prev;
+//    Node* next;
 //
 //};
 //Node* AllocNode(int data)
 //{
-//	Node* n = (Node*)malloc(sizeof(Node));
-//	n->data = data;
-//	n->prev = NULL;
-//	n->next = NULL;
+//    Node* n = (Node*)malloc(sizeof(Node));
+//    n->data = data;
+//    n->next = n->prev = NULL;
+//    return n;
+//}
+//struct LinkedList
+//{
+//    Node* head;
+//    Node* tail;
+//};
+//void InitList(LinkedList* plt)
+//{
+//    plt->head = AllocNode(0);
+//    plt->tail = AllocNode(0);
+//    plt->head->next = plt->tail;
+//    plt->tail->prev = plt->head;
 //
-//	return n;
 //}
-//void FreeNode(Node* p)
+//void UninitList(LinkedList* plt)
 //{
-//	free(p);
+//    Node* np;
+//    for (Node* p = plt->head; p != NULL; p = np)
+//    {
+//        np = p->next;
+//        free(p);
+//    }
 //}
-//void AddNode(Node* head, Node* tail, int data)
+//void PrintList(LinkedList* plt)
 //{
-//	Node* pt;
-//	Node* n;
-//	pt = tail->prev;
-//	n = AllocNode(data);
+//    for (Node* p = plt->head; p != NULL; p = p->next)
+//        printf("%5d", p->data);
+//    printf("\n");
+//}
+//void AddTailList(LinkedList* plt, int data)
+//{
+//    Node* ptail = plt->tail->prev;
+//    Node* n = AllocNode(data);
+//    ptail->next = n;
+//    n->prev = ptail;
+//    n->next = plt->tail;
+//    plt->tail->prev = n;
 //
-//	pt->next = n;
-//	n->prev = pt;
-//	n->next = tail;
-//	tail->prev = n;
 //}
-//void FreeAllNode(Node* head, Node* tail)
+//void AddFirstList(LinkedList* plt, int data)
 //{
+//    Node* nhead = plt->head->next;
+//    Node* n = AllocNode(data);
+//    plt->head->next = n;
+//    n->prev = plt->head;
+//    n->next = nhead;
+//    nhead->prev = n;
+//}
+//void RemoveList(LinkedList* plt, Node* p)
+//{
+//    Node* pp = p->prev;
+//    Node* np = p->next;
+//    pp->next = np;
+//    np->prev = pp;
+//    free(p);
 //
-//	Node* np;
-//	for (Node* p = head; p != NULL; p = np)
-//	{
-//		np = p->next;
-//		FreeNode(p);
-//	}
 //}
-//Node* GetHead(Node* head)
+////
+//Node* GetHead(LinkedList* plt)
 //{
-//	return head->next;
+//    return plt->head->next;
 //}
-//int HasNext(Node* tail, Node* p)
+//int HasNext(LinkedList* plt, Node* p)
 //{
-//	return tail != p;
+//    return p->next != plt->tail;
 //}
-//int GetData(Node* p)
+//Node* Next(LinkedList* plt, Node* p)
 //{
-//	return p->data
+//    return p->next;
 //}
-//Node* Next(Node* p)
+//int GetData(LinkedList* plt, Node* p)
 //{
-//	return p->next;
+//    return p->data;
 //}
 //int main()
 //{
-//	Node* head = NULL;
-//	Node* tail = NULL;
-//	head = AllocNode(0);
-//	tail = AllocNode(0);
-//	head->next = tail;
-//	tail->prev = head;
-//	//
-//	AddNode(head, tail, 10);
-//	AddNode(head, tail, 20);
-//	AddNode(head, tail, 30);
-//	AddNode(head, tail, 40);
-//	AddNode(head, tail, 50);
+//    LinkedList lt;
 //
-//	for (Node* p = GetHead(head); HasNext(tail, p); p = Next(p))
-//	{
-//		if (30 == GetData(p))
-//		{
-//			printf("Ï∞æÏùå!!\n");
-//			break;
-//		}
-//	}
-//		printf("%5d", GetData(p));
-//	printf("\n");
+//    InitList(&lt);
 //
-//	FreeAllNode(head, tail);
+//    AddTailList(&lt, 10);
+//    AddTailList(&lt, 20);
+//    AddTailList(&lt, 30);
+//    AddTailList(&lt, 40);
+//    AddTailList(&lt, 50);
+//    AddFirstList(&lt, 100);
+//    AddFirstList(&lt, 200);
+//
+//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
+//        printf("%5d", GetData(&lt, p));
+//    printf("\n");
+//
+//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
+//        if (GetData(&lt, p) == 30)
+//        {
+//            RemoveList(&lt, p);
+//            break;
+//        }
+//    printf("\n");
+//
+//    PrintList(&lt);
+//    UninitList(&lt);
+//
 //}
 
-#include <stdio.h>
+#include <stdio.h> 
+#include <string.h>
 #include <stdlib.h>
 struct Node
 {
-	int data;
-	Node* prev;
-	Node* next;
+    int data;
+    Node* prev;
+    Node* next;
 
 };
 Node* AllocNode(int data)
 {
-	Node* n = (Node*)malloc(sizeof(Node));
-	n->data = data;
-	n->prev = NULL;
-	n->next = NULL;
+    Node* n = (Node*)malloc(sizeof(Node));
+    n->data = data;
+    n->next = n->prev = NULL;
+    return n;
+}
+struct LinkedList
+{
+    Node* head;
+    Node* tail;
+};
+void InitList(LinkedList* plt)
+{
+    plt->head = AllocNode(0);
+    plt->tail = AllocNode(0);
+    plt->head->next = plt->tail;
+    plt->tail->prev = plt->head;
 
-	return n;
 }
-void FreeNode(Node* p)
+void UninitList(LinkedList* plt)
 {
-	free(p);
+    Node* np;
+    for (Node* p = plt->head; p != NULL; p = np)
+    {
+        np = p->next;
+        free(p);
+    }
 }
-void AddNode(Node* head, Node* tail, int data)
+void PrintList(LinkedList* plt, void (*cb)(int) )
 {
-	Node* pt;
-	Node* n;
-	pt = tail->prev;
-	n = AllocNode(data);
+    for (Node* p = plt->head; p != NULL; p = p->next)
+        cb(p->data);
+}
+void AddTailList(LinkedList* plt, int data)
+{
+    Node* ptail = plt->tail->prev;
+    Node* n = AllocNode(data);
+    ptail->next = n;
+    n->prev = ptail;
+    n->next = plt->tail;
+    plt->tail->prev = n;
 
-	pt->next = n;
-	n->prev = pt;
-	n->next = tail;
-	tail->prev = n;
 }
-void FreeAllNode(Node* head, Node* tail)
+void AddFirstList(LinkedList* plt, int data)
 {
+    Node* nhead = plt->head->next;
+    Node* n = AllocNode(data);
+    plt->head->next = n;
+    n->prev = plt->head;
+    n->next = nhead;
+    nhead->prev = n;
+}
+void RemoveList(LinkedList* plt, Node* p)
+{
+    Node* pp = p->prev;
+    Node* np = p->next;
+    pp->next = np;
+    np->prev = pp;
+    free(p);
 
-	Node* np;
-	for (Node* p = head; p != NULL; p = np)
-	{
-		np = p->next;
-		FreeNode(p);
-	}
-}
-void RemoveNode(Node* head, Node* tail, int key)
-{
-	for (Node* p = head->next; p != tail; p = p->next)
-	{
-		if (key == p->data)
-		{
-			Node* pp = p->prev;
-			Node* np = p->next;
-			pp->next = np;
-			np->prev = pp;
-			FreeNode(p);
-			break;
-		}
-	}
 }
 //
-Node* GetHead(Node* head)
+Node* GetHead(LinkedList* plt)
 {
-	return head->next;
+    return plt->head->next;
 }
-int HasNext(Node* tail, Node* p)
+int HasNext(LinkedList* plt, Node* p)
 {
-	return tail != p;
+    return p->next != plt->tail;
 }
-int GetData(Node* p)
+Node* Next(LinkedList* plt, Node* p)
 {
-	return p->data;
+    return p->next;
 }
-Node* Next(Node* p)
+int GetData(LinkedList* plt, Node* p)
 {
-	return p->next;
+    return p->data;
+}
+void PrintData(int data)
+{
+    printf("== %d ==\n", data);
+}
+void PrintData2(int data)
+{
+    printf("draw : %d\n", data);
 }
 int main()
 {
-	Node* head = NULL;
-	Node* tail = NULL;
-	head = AllocNode(0);
-	tail = AllocNode(0);
-	head->next = tail;
-	tail->prev = head;
-	//
-	AddNode(head, tail, 10);
-	AddNode(head, tail, 20);
-	AddNode(head, tail, 30);
-	AddNode(head, tail, 40);
-	AddNode(head, tail, 50);
+    LinkedList lt;
 
-	RemoveNode(head, tail, 30);
-	for (Node* p = GetHead(head); HasNext(tail, p); p = Next(p))
-		printf("%5d", GetData(p));
-	printf("\n");
+    InitList(&lt);
 
-	FreeAllNode(head, tail);
+    AddTailList(&lt, 10);
+    AddTailList(&lt, 20);
+    AddTailList(&lt, 30);
+    AddTailList(&lt, 40);
+    AddTailList(&lt, 50);
+    AddFirstList(&lt, 100);
+    AddFirstList(&lt, 200);
+
+    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
+        printf("%5d", GetData(&lt, p));
+    printf("\n");
+
+    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
+        if (GetData(&lt, p) == 30)
+        {
+            RemoveList(&lt, p);
+            break;
+        }
+    printf("\n");
+
+    PrintList(&lt, PrintData);
+    PrintList(&lt, PrintData2);
+
+    UninitList(&lt);
+
 }
