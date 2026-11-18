@@ -1,689 +1,337 @@
+//#define WIN32_LEAN_AND_MEAN
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
 //#include <stdio.h>
-//#include <string.h>
-//struct Person
+//#include <stdlib.h>
+//static unsigned __stdcall count_thread(void* arg)
 //{
-//	char name[20];
-//};
-//int main()
-//{
-//    Person p1;
+//    const char* name = (const char*)arg;
+//    int i;
 //
-//    // gets_s(p1, name);
-//    strcpy_s(p1.name, "hong gil dong");
-//    printf("name : %s", p1.name);
+//    for (i = 1; i <= 100; i++) {
+//        printf("  [%s] %d\n", name, i);
+//        Sleep(100);
+//    }
+//    return 0;
 //}
-
+//
+//int main(void) // 쓰레드가 몆개인가  시험나옴
+//{
+//    HANDLE thread;
+//    getchar();
+//
+//    thread = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)"sub thread 1", 0, NULL);
+//
+//    getchar();
+//
+//    thread = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)"sub thread 2", 0, NULL);
+//
+//    getchar();
+//
+//    thread = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)"sub thread 2", 0, NULL);
+//
+//
+//    for (int i = 1; i <= 100; i++) {
+//        printf("  [%s] %d\n", "main thread", i);
+//        Sleep(100);
+//    }
+//
+//
+//    getchar();
+//
+//    return EXIT_SUCCESS;
+//}
 //#include <stdio.h>
-//#include <string.h>
-//struct Person
-//{
-//    char name[20];
-//    char phone[20];
 //
-//};
+//void PrintArray(int arr[], int size)
+//{
+//  for (int i = 0; i < size; ++i)
+//    printf("%d ", arr[i]);
+//  printf("\n");
+//}
 //int main()
 //{
-//    Person p1;
+//  int arr[5] = { 10,20,30,40,50 };
+//  int size = 5;
 //
-//    // gets_s(p1, name);
-//    strcpy_s(p1.name, "hong gil dong");
-//    strcpy_s(p1.phone, "010-1234-5678");
+//  size = 0;
+//  printf("size : %d\n", size);
 //
-//    printf("name : %s\n", p1.name);
-//    printf("phone : %s\n", p1.phone);
+//  PrintArray(arr, size);
+//
+//  for (int i = 0; i < size; ++i)
+//    printf("%d ", arr[i]);
+//  printf("\n");
 //
 //}
 
+//#define WIN32_LEAN_AND_MEAN // 매모리 그림
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
 //#include <stdio.h>
-//#include <string.h>
-//struct Person
-//{
-//    char name[20];
-//    char phone[20];
-//
-//};
-//int main()
-//{
-//    Person p1;
-//
-//    gets_s(p1.name);
-//    gets_s(p1.phone);
-//
-//   //strcpy_s(p1.name, "hong gil dong");
-//   // strcpy_s(p1.phone, "010-1234-5678");
-//
-//    printf("name : %s\n", p1.name);
-//    printf("phone : %s\n", p1.phone);
-//
-//}
-
-//#include <stdio.h> // ���ο� ����  ����
-//#include <string.h>
-//struct Person
-//{
-//    char* name;
-//    char* phone;
-//
-//};
-//int main()
-//{
-//    char buf1[100];
-//    char buf2[200];
-//    Person p1 = { buf1,buf2 };
-//
-//    //gets_s(p1.name, 100);
-//    //gets_s(p1.phone, 100);
-//    strcpy_s(p1.name, 14, "hong gil dong");
-//    strcpy_s(p1.phone, 14, "010-1234-5678");
-//
-//    printf("name : %s\n", p1.name);
-//    printf("phone : %s\n", p1.phone);
-//
-//}
-
-//#include <stdio.h> 
-//#include <string.h>
 //#include <stdlib.h>
-//struct Person
+//static unsigned __stdcall count_thread(void* arg)
 //{
-//    char* name;
-//    char* phone;
+//    int id = *(int*)arg;
+//    int i;
 //
-//};
-//int main()
-//{
-//    Person p1 = { NULL,NULL };
-//
-//    p1.name = (char*)malloc(sizeof(char) * 100);
-//    p1.phone = (char*)malloc(sizeof(char) * 100);
-//
-//    //gets_s(p1.name, 100);
-//    //gets_s(p1.phone, 100);
-//    strcpy_s(p1.name, 14, "hong gil dong");
-//    strcpy_s(p1.phone, 14, "010-1234-5678");
-//
-//    printf("name : %s\n", p1.name);
-//    printf("phone : %s\n", p1.phone);
-//
-//}
-
-//#include <stdio.h> 
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* link;
-//};
-//int main()
-//{
-//    Node n1 = { 10,NULL };
-//    Node n2 = { 20,NULL };
-//    Node n3 = { 30,NULL };
-//    Node* p;
-//
-//    printf("name : %s\n", p1.name);
-//    printf("phone : %s\n", p1.phone);
-//
-//}
-
-//#include <stdio.h> 
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* prev;
-//    Node* next;
-//
-//};
-//int main()
-//{
-//    Node n1 = { 10,NULL,NULL };
-//
-//    printf("%d\n", n1.data);
-//
-//}
-// 
-//#include <stdio.h> 
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* prev;
-//    Node* next;
-//
-//};
-//int main()
-//{
-//    //���� ������� ���� ����Ʈ
-//
-//    Initlist();
-//    AddFirstlist();
-//    AddLastlist();
-//    Removelist();
-//    GetHead();
-//    Next();
-//    HasNext();
-//    GetData();
-//    Printlist();
-//    Jninitlist();
-//    Uninitlist();
-//
-//}
-
-//#include <stdio.h> 
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* prev;
-//    Node* next;
-//
-//};
-//int main()
-//{
-//    Node* head = NULL;
-//    Node* tail = NULL;
-//
-//
-//    Initlist(head, tail);
-//    Printlist(head, tail);
-//    Uninitlist(head, tail);
-//
-//}
-
-//#include <stdio.h> //�޸� �׸�
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* prev;
-//    Node* next;
-//
-//};
-//Node* AllocNode(int data)
-//{
-//    Node* n = (Node*)malloc(sizeof(Node));
-//    n->data = data;
-//    n->next = n->prev = NULL;
-//    return n;
-//}
-//struct LinkedList
-//{
-//    Node* head;
-//    Node* tail;
-//};
-//void InitList(LinkedList* plt)
-//{
-//    plt->head = AllocNode(0);
-//    plt->tail = AllocNode(0);
-//    plt->head->next = plt->tail;
-//    plt->tail->prev = plt->head;
-//
-//}
-//void UninitList(LinkedList* plt)
-//{
-//    Node* np;
-//    for (Node* p = plt->head; p != NULL; p = np)
-//    {
-//        np = p->next;
-//        free(p);
+//    for (i = 1; i <= 100; i++) {
+//        printf("  [%d] %d\n", id, i);
+//        Sleep(1000);
 //    }
+//    return 0;
 //}
-//void PrintList(LinkedList* plt)
-//{
-//    for (Node* p = plt->head; p != NULL; p = p->next)
-//        printf("%d", p->data);
-//    printf("\n");
-//}
-//int main()
-//{
-//    LinkedList lt;
 //
-//    InitList(&lt);
-//    PrintList(&lt);
-//    UninitList(&lt);
+//int data = 10;
 //
+//int main(void) // 쓰레드가 몆개인가  시험나옴
+//{
+//    HANDLE thread;
+//    thread = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&data, 0, NULL);
+//    Sleep(1);
+//    data = 12;
+//    thread = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&data, 0, NULL);
+//    getchar();
+//    return 0;
 //}
 
-//#include <stdio.h> 
-//#include <string.h>
+//#define WIN32_LEAN_AND_MEAN
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
+//#include <stdio.h>
 //#include <stdlib.h>
-//struct Node
+//static unsigned __stdcall count_thread(void* arg)
 //{
-//    int data;
-//    Node* prev;
-//    Node* next;
+//    int id = *(int*)arg;
+//    int i;
 //
-//};
-//Node* AllocNode(int data)
-//{
-//    Node* n = (Node*)malloc(sizeof(Node));
-//    n->data = data;
-//    n->next = n->prev = NULL;
-//    return n;
-//}
-//struct LinkedList
-//{
-//    Node* head;
-//    Node* tail;
-//};
-//void InitList(LinkedList* plt)
-//{
-//    plt->head = AllocNode(0);
-//    plt->tail = AllocNode(0);
-//    plt->head->next = plt->tail;
-//    plt->tail->prev = plt->head;
-//
-//}
-//void UninitList(LinkedList* plt)
-//{
-//    Node* np;
-//    for (Node* p = plt->head; p != NULL; p = np)
-//    {
-//        np = p->next;
-//        free(p);
+//    for (i = 1; i <= 100; i++) {
+//        printf("  [%d] %d\n", id, i);
+//        Sleep(1000);
 //    }
+//    return 0;
 //}
-//void PrintList(LinkedList* plt)
+//
+//int data1 = 10;
+//int data2 = 12;
+//
+//
+//int main(void) // 쓰레드가 몆개인가  시험나옴 매모라 arg가 thread1 10 를 가르킴
 //{
-//    for (Node* p = plt->head; p != NULL; p = p->next)
-//        printf("%d", p->data);
-//    printf("\n");
-//}
-//void AddTailList(LinkedList* plt, int data)
-//{
-//    Node* ptail = plt->tail->prev;
-//    Node* n = AllocNode(data);
-//    ptail->next = n;
-//    n->prev = ptail;
-//    n->next = plt->tail;
-//    plt->tail->prev = n;
+//    HANDLE thread1;
+//    HANDLE thread2;
+//    thread1 = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&data1, 0, NULL);
+//    thread2 = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&data2, 0, NULL);
 //
-//}
-//void AddFirstList(LinkedList* plt, int data)
-//{
-//    Node* nhead = plt->head->next;
-//    Node* n = AllocNode(data);
-//    plt->head->next = n;
-//    n->prev = plt->head;
-//    n->next = nhead;
-//    nhead->prev = n;
-//}
-//int main()
-//{
-//    LinkedList lt;
-//
-//
-//    InitList(&lt);
-//    AddTailList(&lt, 10);
-//    AddTailList(&lt, 20);
-//    AddTailList(&lt, 30);
-//    AddTailList(&lt, 40);
-//    AddTailList(&lt, 50);
-//    AddFirstList(&lt, 100);
-//    AddFirstList(&lt, 200);
-//
-//
-//    PrintList(&lt);
-//    UninitList(&lt);
-//
+//    getchar();
+//    return 0;
 //}
 
-//#include <stdio.h> 
-//#include <string.h>
+//#define WIN32_LEAN_AND_MEAN 
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
+//#include <stdio.h>
 //#include <stdlib.h>
-//struct Node
+//HANDLE hMutex;
+//static unsigned __stdcall count_thread(void* arg)
 //{
-//    int data;
-//    Node* prev;
-//    Node* next;
+//    int* pcount = (int*)arg; // 메모리 그림
+//    int i;
 //
-//};
-//Node* AllocNode(int data)
-//{
-//    Node* n = (Node*)malloc(sizeof(Node));
-//    n->data = data;
-//    n->next = n->prev = NULL;
-//    return n;
-//}
-//struct LinkedList
-//{
-//    Node* head;
-//    Node* tail;
-//};
-//void InitList(LinkedList* plt)
-//{
-//    plt->head = AllocNode(0);
-//    plt->tail = AllocNode(0);
-//    plt->head->next = plt->tail;
-//    plt->tail->prev = plt->head;
-//
-//}
-//void UninitList(LinkedList* plt)
-//{
-//    Node* np;
-//    for (Node* p = plt->head; p != NULL; p = np)
-//    {
-//        np = p->next;
-//        free(p);
-//    }
-//}
-//void PrintList(LinkedList* plt)
-//{
-//    for (Node* p = plt->head; p != NULL; p = p->next)
-//        printf("%d", p->data);
-//    printf("\n");
-//}
-//void AddTailList(LinkedList* plt, int data)
-//{
-//    Node* ptail = plt->tail->prev;
-//    Node* n = AllocNode(data);
-//    ptail->next = n;
-//    n->prev = ptail;
-//    n->next = plt->tail;
-//    plt->tail->prev = n;
-//
-//}
-//void AddFirstList(LinkedList* plt, int data)
-//{
-//    Node* nhead = plt->head->next;
-//    Node* n = AllocNode(data);
-//    plt->head->next = n;
-//    n->prev = plt->head;
-//    n->next = nhead;
-//    nhead->prev = n;
-//}
-//Node* GetHead(LinkedList* plt)
-//{
-//    return plt->head->next;
-//}
-//int HasNext(LinkedList* plt, Node* p)
-//{
-//    return p->next != plt->tail;
-//}
-//Node* Next(LinkedList* plt, Node* p)
-//{
-//    return p->next;
-//}
-//int GetData(LinkedList* plt, Node* p)
-//{
-//    return p->data;
-//}
-//int main()
-//{
-//    LinkedList lt;
-//
-//    InitList(&lt);
-//
-//    AddTailList(&lt, 10);
-//    AddTailList(&lt, 20);
-//    AddTailList(&lt, 30);
-//    AddTailList(&lt, 40);
-//    AddTailList(&lt, 50);
-//    AddFirstList(&lt, 100);
-//    AddFirstList(&lt, 200);
-//
-//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
-//        printf("%d", GetData(&lt, p));
-//    printf("\n");
-//
-//    PrintList(&lt);
-//    UninitList(&lt);
-//
-//}
-
-//#include <stdio.h> //�޸𸮱׸� 
-//#include <string.h>
-//#include <stdlib.h>
-//struct Node
-//{
-//    int data;
-//    Node* prev;
-//    Node* next;
-//
-//};
-//Node* AllocNode(int data)
-//{
-//    Node* n = (Node*)malloc(sizeof(Node));
-//    n->data = data;
-//    n->next = n->prev = NULL;
-//    return n;
-//}
-//struct LinkedList
-//{
-//    Node* head;
-//    Node* tail;
-//};
-//void InitList(LinkedList* plt)
-//{
-//    plt->head = AllocNode(0);
-//    plt->tail = AllocNode(0);
-//    plt->head->next = plt->tail;
-//    plt->tail->prev = plt->head;
-//
-//}
-//void UninitList(LinkedList* plt)
-//{
-//    Node* np;
-//    for (Node* p = plt->head; p != NULL; p = np)
-//    {
-//        np = p->next;
-//        free(p);
-//    }
-//}
-//void PrintList(LinkedList* plt)
-//{
-//    for (Node* p = plt->head; p != NULL; p = p->next)
-//        printf("%5d", p->data);
-//    printf("\n");
-//}
-//void AddTailList(LinkedList* plt, int data)
-//{
-//    Node* ptail = plt->tail->prev;
-//    Node* n = AllocNode(data);
-//    ptail->next = n;
-//    n->prev = ptail;
-//    n->next = plt->tail;
-//    plt->tail->prev = n;
-//
-//}
-//void AddFirstList(LinkedList* plt, int data)
-//{
-//    Node* nhead = plt->head->next;
-//    Node* n = AllocNode(data);
-//    plt->head->next = n;
-//    n->prev = plt->head;
-//    n->next = nhead;
-//    nhead->prev = n;
-//}
-//void RemoveList(LinkedList* plt, Node* p)
-//{
-//    Node* pp = p->prev;
-//    Node* np = p->next;
-//    pp->next = np;
-//    np->prev = pp;
-//    free(p);
-//
-//}
-////
-//Node* GetHead(LinkedList* plt)
-//{
-//    return plt->head->next;
-//}
-//int HasNext(LinkedList* plt, Node* p)
-//{
-//    return p->next != plt->tail;
-//}
-//Node* Next(LinkedList* plt, Node* p)
-//{
-//    return p->next;
-//}
-//int GetData(LinkedList* plt, Node* p)
-//{
-//    return p->data;
-//}
-//int main()
-//{
-//    LinkedList lt;
-//
-//    InitList(&lt);
-//
-//    AddTailList(&lt, 10);
-//    AddTailList(&lt, 20);
-//    AddTailList(&lt, 30);
-//    AddTailList(&lt, 40);
-//    AddTailList(&lt, 50);
-//    AddFirstList(&lt, 100);
-//    AddFirstList(&lt, 200);
-//
-//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
-//        printf("%5d", GetData(&lt, p));
-//    printf("\n");
-//
-//    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
-//        if (GetData(&lt, p) == 30)
+//    for (i = 1; i <= 1000000; i++) {
 //        {
-//            RemoveList(&lt, p);
-//            break;
+//          WaitForSingleObject(hMutex, INFINITE);
+//          *pcount = *pcount + 1; //원자적인 연산을 보장해야 함
+//          ReleaseMutex(hMutex);
 //        }
-//    printf("\n");
+//    }
+//    return 0;
+//}
 //
-//    PrintList(&lt);
-//    UninitList(&lt);
+////int data1 = 10;
+////int data2 = 12;
+//int count = 0;
 //
+//
+//int main(void) 
+//{
+//    //HANDLE thread1;
+//    //HANDLE thread2;
+//    HANDLE hThreads[2] = { NULL };
+//    
+//    hMutex = CreateMutex(NULL, FALSE, NULL); //false 면 신호상태 true면 실행상태
+//
+//    hThreads[0] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&count, 0, NULL);
+//    hThreads[1] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&count, 0, NULL);
+//
+//    WaitForMultipleObjects(2, hThreads, TRUE, INFINITE);
+//    getchar();
+//    printf("count : %d\n", count);
+//    return 0;
 //}
 
-#include <stdio.h> 
-#include <string.h>
-#include <stdlib.h>
-struct Node
-{
-    int data;
-    Node* prev;
-    Node* next;
-
-};
-Node* AllocNode(int data)
-{
-    Node* n = (Node*)malloc(sizeof(Node));
-    n->data = data;
-    n->next = n->prev = NULL;
-    return n;
-}
-struct LinkedList
-{
-    Node* head;
-    Node* tail;
-};
-void InitList(LinkedList* plt)
-{
-    plt->head = AllocNode(0);
-    plt->tail = AllocNode(0);
-    plt->head->next = plt->tail;
-    plt->tail->prev = plt->head;
-
-}
-void UninitList(LinkedList* plt)
-{
-    Node* np;
-    for (Node* p = plt->head; p != NULL; p = np)
-    {
-        np = p->next;
-        free(p);
-    }
-}
-void PrintList(LinkedList* plt, void (*cb)(int) )
-{
-    for (Node* p = plt->head; p != NULL; p = p->next)
-        cb(p->data);
-}
-void AddTailList(LinkedList* plt, int data)
-{
-    Node* ptail = plt->tail->prev;
-    Node* n = AllocNode(data);
-    ptail->next = n;
-    n->prev = ptail;
-    n->next = plt->tail;
-    plt->tail->prev = n;
-
-}
-void AddFirstList(LinkedList* plt, int data)
-{
-    Node* nhead = plt->head->next;
-    Node* n = AllocNode(data);
-    plt->head->next = n;
-    n->prev = plt->head;
-    n->next = nhead;
-    nhead->prev = n;
-}
-void RemoveList(LinkedList* plt, Node* p)
-{
-    Node* pp = p->prev;
-    Node* np = p->next;
-    pp->next = np;
-    np->prev = pp;
-    free(p);
-
-}
+//#define WIN32_LEAN_AND_MEAN 
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
+//#include <stdio.h>
+//#include <stdlib.h>
+//HANDLE hMutex;
+//static unsigned __stdcall count_thread(void* arg)
+//{
+//    int* pcount = (int*)arg; // 메모리 그림
+//    int i;
 //
-Node* GetHead(LinkedList* plt)
-{
-    return plt->head->next;
-}
-int HasNext(LinkedList* plt, Node* p)
-{
-    return p->next != plt->tail;
-}
-Node* Next(LinkedList* plt, Node* p)
-{
-    return p->next;
-}
-int GetData(LinkedList* plt, Node* p)
-{
-    return p->data;
-}
-void PrintData(int data)
-{
-    printf("== %d ==\n", data);
-}
-void PrintData2(int data)
-{
-    printf("draw : %d\n", data);
-}
-int main()
-{
-    LinkedList lt;
+//    for (i = 1; i <= 1000000; i++) {
+//        {
+//            WaitForSingleObject(hMutex, INFINITE);
+//            *pcount = *pcount + 1; //원자적인 연산을 보장해야 함
+//            ReleaseMutex(hMutex);
+//        }
+//    }
+//    return 0;
+//}
+//
+////int data1 = 10;
+////int data2 = 12;
+//
+//
+//int main(void)
+//{
+//    //HANDLE thread1;
+//    //HANDLE thread2;
+//    int* pCount = (int*)malloc(sizeof(int));
+//    *pCount = 0;
+//    HANDLE hThreads[2] = { NULL };
+//
+//    hMutex = CreateMutex(NULL, FALSE, NULL); //false 면 신호상태 true면 실행상태
+//
+//    hThreads[0] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)pCount, 0, NULL);
+//    hThreads[1] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)pCount, 0, NULL);
+//
+//    WaitForMultipleObjects(2, hThreads, TRUE, INFINITE);
+//    getchar();
+//    printf("count : %d\n", *pCount);
+//
+//    free(pCount);
+//    CloseHandle(hMutex);
+//    CloseHandle(hThreads[0]);
+//    CloseHandle(hThreads[0]);
+//
+//    return 0;
+//}
 
-    InitList(&lt);
+//#define WIN32_LEAN_AND_MEAN 
+//#include <windows.h>
+//#include <process.h> /* _beginthreadex */
+//#include <stdio.h>
+//#include <stdlib.h>
+//HANDLE hMutex;
+//static unsigned __stdcall count_thread(void* arg)
+//{
+//    int* pcount = (int*)arg; // 메모리 그림
+//    int i;
+//    int count = 0;
+//
+//    for (i = 1; i <= 1000000; i++) {
+//        {
+//            count = count + 1;
+//        }
+//    }
+//    WaitForSingleObject(hMutex, INFINITE);
+//    *pcount += count;
+//    ReleaseMutex(hMutex);
+//    return 0;
+//}
+//
+////int data1 = 10;
+////int data2 = 12;
+//
+//
+//int main(void)
+//{
+//    //HANDLE thread1;
+//    //HANDLE thread2;
+//    int* pCount = (int*)malloc(sizeof(int));
+//    *pCount = 0;
+//    HANDLE hThreads[2] = { NULL };
+//
+//    hMutex = CreateMutex(NULL, FALSE, NULL); //false 면 신호상태 true면 실행상태
+//
+//    hThreads[0] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)pCount, 0, NULL);
+//    hThreads[1] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)pCount, 0, NULL);
+//
+//    WaitForMultipleObjects(2, hThreads, TRUE, INFINITE);
+//    getchar();
+//    printf("count : %d\n", *pCount);
+//
+//    free(pCount);
+//    CloseHandle(hMutex);
+//    CloseHandle(hThreads[0]);
+//    CloseHandle(hThreads[0]);
+//
+//    return 0;
+//}
 
-    AddTailList(&lt, 10);
-    AddTailList(&lt, 20);
-    AddTailList(&lt, 30);
-    AddTailList(&lt, 40);
-    AddTailList(&lt, 50);
-    AddFirstList(&lt, 100);
-    AddFirstList(&lt, 200);
+#define WIN32_LEAN_AND_MEAN 
+#include <windows.h>
+#include <process.h> /* _beginthreadex */
+#include <stdio.h>
+#include <stdlib.h>
 
-    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
-        printf("%5d", GetData(&lt, p));
-    printf("\n");
+struct ThreadParam
+{
+    int threadId;
+    int* pCount;
+};
+HANDLE hMutex;
+static unsigned __stdcall count_thread(void* arg)
+{
+    int* pcount = ((ThreadParam*)arg)->pCount; // 메모리 그림
+    int threadId = ((ThreadParam*)arg)->threadId;
+    printf("%d Thread 시작\n", threadId);
 
-    for (Node* p = GetHead(&lt); HasNext(&lt, p); p = Next(&lt, p))
-        if (GetData(&lt, p) == 30)
+    int count = 0;
+    for (int i = 1; i <= 1000000; i++) {
         {
-            RemoveList(&lt, p);
-            break;
+            count = count + 1;
         }
-    printf("\n");
+    }
+    WaitForSingleObject(hMutex, INFINITE);
+    *pcount += count;
+    ReleaseMutex(hMutex);
+    return 0;
+}
 
-    PrintList(&lt, PrintData);
-    PrintList(&lt, PrintData2);
+//int data1 = 10;
+//int data2 = 12;
 
-    UninitList(&lt);
 
+int main(void)
+{
+    //HANDLE thread1;
+    //HANDLE thread2;
+    int* pCount = (int*)malloc(sizeof(int));
+    *pCount = 0;
+
+    ThreadParam t1 = { 1, pCount };
+    ThreadParam t2 = { 1, pCount };
+
+
+    HANDLE hThreads[2] = { NULL };
+
+    hMutex = CreateMutex(NULL, FALSE, NULL); //false 면 신호상태 true면 실행상태
+
+    hThreads[0] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&t1, 0, NULL);
+    hThreads[1] = (HANDLE)_beginthreadex(NULL, 0, count_thread, (void*)&t2, 0, NULL);
+
+    WaitForMultipleObjects(2, hThreads, TRUE, INFINITE);
+    getchar();
+    printf("count : %d\n", *pCount);
+
+    free(pCount);
+    CloseHandle(hMutex);
+    CloseHandle(hThreads[0]);
+    CloseHandle(hThreads[0]);
+
+    return 0;
 }
